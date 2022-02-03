@@ -28,7 +28,7 @@ namespace Fatchip\CTPayment\CTPaymentMethods;
 
 use Fatchip\CTPayment\CTPaymentMethod;
 use Fatchip\CTPayment\CTResponse;
-use Shopware_Plugins_Frontend_FatchipCTPayment_Bootstrap as FatchipCTPayment;
+use Shopware_Plugins_Frontend_FatchipFCSPayment_Bootstrap as FatchipFCSPayment;
 
 /**
  * @package Fatchip\CTPayment\CTPaymentMethods
@@ -154,8 +154,8 @@ class KlarnaPayments extends CTPaymentMethod
         $requestType = 'KLARNA_SESSION';
         $ctRequest = $this->cleanUrlParams($params);
 
-        /* @var FatchipCTPayment $plugin */
-        $plugin = Shopware()->Container()->get('plugins')->Frontend()->FatchipCTPayment();
+        /* @var FatchipFCSPayment $plugin */
+        $plugin = Shopware()->Container()->get('plugins')->Frontend()->FatchipFCSPayment();
         $response = $plugin->callComputopService($ctRequest, $this, $requestType, $this->getCTPaymentURL());
 
         return $response;

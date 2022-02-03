@@ -63,7 +63,7 @@ abstract class CTPaymentMethod extends Blowfish
     public function __construct()
     {
         /** @noinspection PhpUndefinedMethodInspection */
-        $this->config = Shopware()->Plugins()->Frontend()->FatchipCTPayment()->Config()->toArray();
+        $this->config = Shopware()->Plugins()->Frontend()->FatchipFCSPayment()->Config()->toArray();
 
         $this->merchantID = $this->config['merchantID'];
         $this->blowfishPassword = $this->config['blowfishPassword'];

@@ -28,7 +28,7 @@ namespace Fatchip\CTPayment\CTHelper;
 
 use Exception;
 use Fatchip\CTPayment\CTOrder\CTOrder;
-use Shopware\Plugins\FatchipCTPayment\Util;
+use Shopware\Plugins\FatchipFCSPayment\Util;
 
 
 /**

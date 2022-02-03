@@ -28,7 +28,7 @@
 namespace Fatchip\CTPayment;
 
 use Fatchip\CTPayment\CTOrder;
-use Shopware\Plugins\FatchipCTPayment\Util;
+use Shopware\Plugins\FatchipFCSPayment\Util;
 
 /**
  * Class CTPaymentMethodIframe
