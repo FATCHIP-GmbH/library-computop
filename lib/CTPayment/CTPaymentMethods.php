@@ -156,7 +156,7 @@ class CTPaymentMethods
                 'shortname' => 'SOFORT',
                 'description' => 'Computop SOFORT',
                 'action' => 'FatchipFCSSofort',
-                //'template' => 'fatchip_computop_sofort.tpl',
+                //'template' => 'fatchip_firstcash_sofort.tpl',
                 'template' => '',
                 'additionalDescription' => '',
                 'className' => 'Sofort',
