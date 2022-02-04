@@ -13,7 +13,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_creditcard',
                 'shortname' => 'Kreditkarte',
-                'description' => 'Computop Kreditkarte',
+                'description' => 'First Cash Solution Kreditkarte',
                 'action' => 'FatchipFCSCreditCard',
                 'template' => '',
                 'additionalDescription' => '',
@@ -23,7 +23,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_easycredit',
                 'shortname' => 'Easycredit',
-                'description' => 'Computop Easycredit',
+                'description' => 'First Cash Solution Easycredit',
                 'action' => 'FatchipFCSEasyCredit',
                 'template' => 'fatchip_firstcash_easycredit.tpl',
                 'additionalDescription' => 'Rechnungs- und Lieferadresse müssen gleich sein, damit easyCredit genutzt werden kann',
@@ -33,7 +33,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_ideal',
                 'shortname' => 'iDEAL',
-                'description' => 'Computop iDEAL',
+                'description' => 'First Cash Solution iDEAL',
                 'action' => 'FatchipFCSIdeal',
                 'template' => 'fatchip_firstcash_ideal.tpl',
                 'additionalDescription' => '',
@@ -43,7 +43,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_klarna_slice_it',
                 'shortname' => 'Klarna Slice it',
-                'description' => 'Computop Klarna Slice it',
+                'description' => 'First Cash Solution Klarna Slice it',
                 'action' => 'FatchipFCSKlarnaPayments',
                 'template' => 'fatchip_firstcash_klarna_slice_it.tpl',
                 'additionalDescription' => '',
@@ -53,7 +53,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_klarna_pay_now',
                 'shortname' => 'Klarna Pay now',
-                'description' => 'Computop Klarna Pay now',
+                'description' => 'First Cash Solution Klarna Pay now',
                 'action' => 'FatchipFCSKlarnaPayments',
                 'template' => 'fatchip_firstcash_klarna_pay_now.tpl',
                 'additionalDescription' => '',
@@ -63,7 +63,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_klarna_pay_later',
                 'shortname' => 'Klarna Pay later',
-                'description' => 'Computop Klarna Pay later',
+                'description' => 'First Cash Solution Klarna Pay later',
                 'action' => 'FatchipFCSKlarnaPayments',
                 'template' => 'fatchip_firstcash_klarna_pay_later.tpl',
                 'additionalDescription' => '',
@@ -73,7 +73,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_klarna_direct_bank_transfer',
                 'shortname' => 'Klarna Sofort',
-                'description' => 'Computop Klarna Sofort',
+                'description' => 'First Cash Solution Klarna Sofort',
                 'action' => 'FatchipFCSKlarnaPayments',
                 'template' => 'fatchip_firstcash_klarna_direct_bank_transfer.tpl',
                 'additionalDescription' => '',
@@ -83,7 +83,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_klarna_direct_debit',
                 'shortname' => 'Klarna Lastschrift',
-                'description' => 'Computop Klarna Lastschrift',
+                'description' => 'First Cash Solution Klarna Lastschrift',
                 'action' => 'FatchipFCSKlarnaPayments',
                 'template' => 'fatchip_firstcash_klarna_direct_debit.tpl',
                 'additionalDescription' => '',
@@ -93,7 +93,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_lastschrift',
                 'shortname' => 'Lastschrift',
-                'description' => 'Computop Lastschrift',
+                'description' => 'First Cash Solution Lastschrift',
                 'action' => 'FatchipFCSLastschrift',
                 'template' => 'fatchip_firstcash_lastschrift.tpl',
                 'additionalDescription' => '',
@@ -103,7 +103,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_paydirekt',
                 'shortname' => 'Paydirekt',
-                'description' => 'Computop Paydirekt',
+                'description' => 'First Cash Solution Paydirekt',
                 'action' => 'FatchipFCSPaydirekt',
                 'template' => '',
                 'additionalDescription' => '',
@@ -113,7 +113,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_paypal_standard',
                 'shortname' => 'PayPal',
-                'description' => 'Computop PayPal Standard',
+                'description' => 'First Cash Solution PayPal Standard',
                 'action' => 'FatchipFCSPaypalStandard',
                 'template' => '',
                 'additionalDescription' => '',
@@ -123,7 +123,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_paypal_express',
                 'shortname' => 'PayPalExpress',
-                'description' => 'Computop PayPal Express',
+                'description' => 'First Cash Solution PayPal Express',
                 'action' => 'FatchipFCSPaypalExpress',
                 'template' => '',
                 'additionalDescription' => '',
@@ -133,7 +133,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_postfinance',
                 'shortname' => 'Postfinance',
-                'description' => 'Computop Postfinance',
+                'description' => 'First Cash Solution Postfinance',
                 'action' => 'FatchipFCSPostFinance',
                 'template' => '',
                 'additionalDescription' => '',
@@ -143,7 +143,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_przelewy24',
                 'shortname' => 'Przelewy24',
-                'description' => 'Computop Przelewy24',
+                'description' => 'First Cash Solution Przelewy24',
                 'action' => 'FatchipFCSPrzelewy24',
                 'countries' => ['PL',],
                 'template' => '',
@@ -154,7 +154,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_sofort',
                 'shortname' => 'SOFORT',
-                'description' => 'Computop SOFORT',
+                'description' => 'First Cash Solution SOFORT',
                 'action' => 'FatchipFCSSofort',
                 //'template' => 'fatchip_firstcash_sofort.tpl',
                 'template' => '',
@@ -165,7 +165,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_amazonpay',
                 'shortname' => 'AmazonPay',
-                'description' => 'Computop AmazonPay',
+                'description' => 'First Cash Solution AmazonPay',
                 'action' => 'FatchipFCSAmazon',
                 'template' => '',
                 'additionalDescription' => '',
@@ -175,7 +175,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_afterpay_invoice',
                 'shortname' => 'AfterpayInvoice',
-                'description' => 'Computop Afterpay Rechnung',
+                'description' => 'First Cash Solution Afterpay Rechnung',
                 'action' => 'FatchipFCSAfterpay',
                 'template' => 'fatchip_firstcash_afterpay_invoice.tpl',
                 'additionalDescription' => '',
@@ -185,7 +185,7 @@ class CTPaymentMethods
             [
                 'name' => 'fatchip_firstcash_afterpay_installment',
                 'shortname' => 'AfterpayInstallment',
-                'description' => 'Computop Afterpay Ratenzahlung',
+                'description' => 'First Cash Solution Afterpay Ratenzahlung',
                 'action' => 'FatchipFCSAfterpay',
                 'template' => 'fatchip_firstcash_afterpay_installment.tpl',
                 'additionalDescription' => '',

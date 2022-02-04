@@ -1,25 +1,25 @@
 <?php
 
 /**
- * The Computop Shopware Plugin is free software: you can redistribute it and/or modify
+ * The First Cash Solution Shopware Plugin is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * The Computop Shopware Plugin is distributed in the hope that it will be useful,
+ * The First Cash Solution Shopware Plugin is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with Computop Shopware Plugin. If not, see <http://www.gnu.org/licenses/>.
+ * along with First Cash Solution Shopware Plugin. If not, see <http://www.gnu.org/licenses/>.
  *
  * PHP version 5.6, 7.0 , 7.1
  *
  * @category   Payment
  * @package    FatchipFCSPayment
  * @author     FATCHIP GmbH <support@fatchip.de>
- * @copyright  2018 Computop
+ * @copyright  2018 First Cash Solution
  * @license    <http://www.gnu.org/licenses/> GNU Lesser General Public License
  * @link       https://www.computop.com
  */
@@ -280,7 +280,7 @@ class CTPaymentConfigForms
                 'value' => 'ct_responsive_ch',
                 'label' => 'Kreditkarte - Template Name',
                 'required' => false,
-                'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible Computop-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive Computop-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
+                'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible First Cash Solution-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
             ],
         ];
 
@@ -449,7 +449,7 @@ class CTPaymentConfigForms
                         ]],
                     ],
                 'description' => 'bestimmt, ob der angefragte Betrag sofort oder erst später eingezogen wird. <br>
-                                  <b>Wichtig:<br>Bitte kontaktieren Sie den Computop Support für Manual, um die unterschiedlichen Einsatzmöglichkeiten abzuklären.</b>',
+                                  <b>Wichtig:<br>Bitte kontaktieren Sie den First Cash Solution Support für Manual, um die unterschiedlichen Einsatzmöglichkeiten abzuklären.</b>',
             ],
             'paypalSetOrderStatus' => [
                 'name' => 'paypalSetOrderStatus',
@@ -646,8 +646,8 @@ class CTPaymentConfigForms
                     ],
                 'description' => 'führt eine Bonitätsprüfung aus, bevor ein Benutzer Zahlarten auswählen kann.<BR>
                                   Erstellen Sie unter "Einstellungen->Riskmanagement" Regeln mit den Bedingungen<BR>
-                                  "Computop Risikoampel IST <Farbe>"<BR>und<BR>
-                                  "Computop Risikoampel IST NICHT <Farbe>"<BR>',
+                                  "First Cash Risikoampel IST <Farbe>"<BR>und<BR>
+                                  "First Cash Risikoampel IST NICHT <Farbe>"<BR>',
             ],
         ];
 
@@ -744,7 +744,7 @@ class CTPaymentConfigForms
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Kreditkarte - Template Name',
-                    'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible Computop-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive Computop-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
+                    'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible First Cash Solution-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
                 ],
                 'idealDirektOderUeberSofort' => [
                     'label' => 'iDEAL - Dienst',
@@ -775,7 +775,7 @@ class CTPaymentConfigForms
                 'paypalCaption' => [
                     'label' => 'Paypal - Capture Modus',
                     'description' => 'bestimmt, ob der angefragte Betrag sofort oder erst später eingezogen wird. <br>
-                                  <b>Wichtig:<br>Bitte kontaktieren Sie den Computop Support für Manual, um die unterschiedlichen Einsatzmöglichkeiten abzuklären.</b>',
+                                  <b>Wichtig:<br>Bitte kontaktieren Sie den First Cash Solution Support für Manual, um die unterschiedlichen Einsatzmöglichkeiten abzuklären.</b>',
                 ],
                 'paypalSetOrderStatus' => [
                     'label' => 'Paypal - Bestellstatus bei Capture',
@@ -828,8 +828,8 @@ class CTPaymentConfigForms
                     'label' => 'CRIF Bonitätsprüfung',
                     'description' => 'führt eine Bonitätsprüfung aus, bevor ein Benutzer Zahlarten auswählen kann.<BR>
                                   Erstellen Sie unter "Einstellungen->Riskmanagement" Regeln mit den Bedingungen<BR>
-                                  "Computop Risikoampel IST <Farbe>"<BR>und<BR>
-                                  "Computop Risikoampel IST NICHT <Farbe>"<BR>',
+                                  "First Cash Risikoampel IST <Farbe>"<BR>und<BR>
+                                  "First Cash Risikoampel IST NICHT <Farbe>"<BR>',
                 ],
                 'klarnaaction' => [
                     'label' => 'Klarna Aktionscode',
@@ -992,8 +992,8 @@ class CTPaymentConfigForms
                     'label' => 'CRIF Credit check',
                     'description' => 'checks credit worthiness before displaying possible payments.<BR>
                                   Create your own rules in "Riskmanagement" with the conditions <BR>
-                                  "Computop Traffic light IS <Color>"<BR>and<BR>
-                                  "Computop Traffic light IST NOT <Color>"<BR>',
+                                  "First Cash Traffic light IS <Color>"<BR>and<BR>
+                                  "First Cash Traffic light IST NOT <Color>"<BR>',
                 ],
                 'klarnaaction' => [
                     'label' => 'Klarna action code',
@@ -1157,8 +1157,8 @@ class CTPaymentConfigForms
                     'label' => 'Vérification de crédit CRIF',
                     'description' => 'Vérifie la validité du crédit avant d\'afficher les paiements disponibles.<BR>
                                   Créez vos propre règles dans "Gestion de risque" avec les conditions <BR>
-                                  "Computop Traffic light IS <Color>"<BR>et<BR>
-                                  "Computop Traffic light IST NOT <Color>"<BR>',
+                                  "First Cash Traffic light IS <Color>"<BR>et<BR>
+                                  "First Cash Traffic light IST NOT <Color>"<BR>',
                 ],
                 'klarnaaction' => [
                     'label' => 'Code action Klarna',
