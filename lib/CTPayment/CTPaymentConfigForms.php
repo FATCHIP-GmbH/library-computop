@@ -17,7 +17,7 @@
  * PHP version 5.6, 7.0 , 7.1
  *
  * @category   Payment
- * @package    FatchipCTPayment
+ * @package    FatchipFCSPayment
  * @author     FATCHIP GmbH <support@fatchip.de>
  * @copyright  2018 Computop
  * @license    <http://www.gnu.org/licenses/> GNU Lesser General Public License
@@ -39,7 +39,7 @@ class CTPaymentConfigForms
                 'value' => '',
                 'label' => 'MerchantID',
                 'required' => true,
-                'description' => '{s name="backend/FatchipCTPayment/merchantid_desc"}Ihre Merchant Id (Benutzername){/s}',
+                'description' => '{s name="backend/FatchipFCSPayment/merchantid_desc"}Ihre Merchant Id (Benutzername){/s}',
             ],
             'mac' => [
                 'name' => 'mac',
@@ -97,7 +97,7 @@ class CTPaymentConfigForms
                             'fr_FR' => 'activer la journalisation',
                         ]],
                     ],
-                'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis.<BR>',
+                'description' => 'Erzeugt eine Log Datei <FatchipFCSPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis.<BR>',
            ],
         ];
 
@@ -701,7 +701,7 @@ class CTPaymentConfigForms
                 ],
                 'debuglog' => [
                     'label' => 'Debug Protokoll',
-                    'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis',
+                    'description' => 'Erzeugt eine Log Datei <FatchipFCSPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis',
                 ],
                 'creditCardMode' => [
                     'label' => 'Kreditkarte - Modus',
@@ -866,7 +866,7 @@ class CTPaymentConfigForms
                 ],
                 'debuglog' => [
                     'label' => 'Debug protocol',
-                    'description' => 'Creates a log file <FatchipCTPayment_.log> with debugging output on the shopware log folder',
+                    'description' => 'Creates a log file <FatchipFCSPayment_.log> with debugging output on the shopware log folder',
                 ],
                 'creditCardMode' => [
                     'label' => 'Creditcard - Mode',
@@ -1030,7 +1030,7 @@ class CTPaymentConfigForms
                 ],
                 'debuglog' => [
                     'label' => 'Journalisation de déboggage',
-                    'description' => 'Créer un journal <FatchipCTPayment_.log> avec les traces de déboggage dans le dossier de journaux de shopware',
+                    'description' => 'Créer un journal <FatchipFCSPayment_.log> avec les traces de déboggage dans le dossier de journaux de shopware',
                 ],
                 'creditCardMode' => [
                     'label' => 'Carte de crédit - Mode',

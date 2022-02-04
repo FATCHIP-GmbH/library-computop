@@ -19,7 +19,7 @@
  * PHP version 5.6, 7.0 , 7.1
  *
  * @category   Payment
- * @package    FatchipCTPayment
+ * @package    FatchipFCSPayment
  * @author     FATCHIP GmbH <support@fatchip.de>
  * @copyright  2018 Computop
  * @license    <http://www.gnu.org/licenses/> GNU Lesser General Public License
@@ -69,7 +69,7 @@ abstract class CTPaymentMethod extends Blowfish
         $this->blowfishPassword = $this->config['blowfishPassword'];
         $this->mac = $this->config['mac'];
 
-        $this->utils = Shopware()->Container()->get('FatchipCTPaymentUtils');
+        $this->utils = Shopware()->Container()->get('FatchipFCSPaymentUtils');
     }
 
     /**

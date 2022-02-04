@@ -18,7 +18,7 @@
  * PHP version 5.6, 7.0 , 7.1
  *
  * @category   Payment
- * @package    FatchipCTPayment
+ * @package    FatchipFCSPayment
  * @subpackage CTPaymentMethods
  * @author     FATCHIP GmbH <support@fatchip.de>
  * @copyright  2018 Computop
@@ -141,7 +141,7 @@ class AmazonPay extends CTPaymentMethod
     public function getAmazonSCOParams($payID, $transID, $amount, $currency, $orderDesc, $referenceID)
     {
         $router = Shopware()->Front()->Router();
-        $successurl = $router->assemble(array('controller' => 'FatchipCTAmazon', 'action' => 'gateway',
+        $successurl = $router->assemble(array('controller' => 'FatchipFCSAmazon', 'action' => 'gateway',
             'forceSecure' => true, 'appendSession' => false));
         $errorurl = $router->assemble(array('controller' => 'checkout', 'action' => 'cart',
             'amznLogout' => true, 'forceSecure' => true, 'appendSession' => false, 'amznError' => 'SCO'));

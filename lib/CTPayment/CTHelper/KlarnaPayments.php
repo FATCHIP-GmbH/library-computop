@@ -16,7 +16,7 @@
  * PHP version 5.6, 7.0 , 7.1
  *
  * @category   Payment
- * @package    FatchipCTPayment
+ * @package    FatchipFCSPayment
  * @subpackage CTPaymentMethods
  * @author     FATCHIP GmbH <support@fatchip.de>
  * @copyright  2018 Computop
@@ -44,23 +44,23 @@ trait KlarnaPayments
         /** @var \Fatchip\CTPayment\CTPaymentMethods\KlarnaPayments $payment */
         $session = Shopware()->Session();
 
-        $sessionAmount = $session->get('FatchipCTKlarnaPaymentAmount', '');
+        $sessionAmount = $session->get('FatchipFCSKlarnaPaymentAmount', '');
         $currentAmount = $ctOrder->getAmount();
         $amountChanged = $currentAmount !== $sessionAmount;
 
-        $sessionArticleListBase64 = $session->get('FatchipCTKlarnaPaymentArticleListBase64', '');
+        $sessionArticleListBase64 = $session->get('FatchipFCSKlarnaPaymentArticleListBase64', '');
         $currentArticleListBase64 = $this->createArticleListBase64();
         $articleListChanged = $sessionArticleListBase64 !== $currentArticleListBase64;
 
-        $sessionAddressHash = $session->get('FatchipCTKlarnaPaymentAddressHash', '');
+        $sessionAddressHash = $session->get('FatchipFCSKlarnaPaymentAddressHash', '');
         $currentAddressHash = $this->createAddressHash();
         $addressChanged = $sessionAddressHash !== $currentAddressHash;
 
-        $sessionDispatch = $session->get('FatchipCTKlarnaPaymentDispatchID', '');
+        $sessionDispatch = $session->get('FatchipFCSKlarnaPaymentDispatchID', '');
         $currentDispatch = $session->offsetGet('sDispatch');
         $dispatchChanged = $sessionDispatch != $currentDispatch;
 
-        return !$session->offsetExists('FatchipCTKlarnaAccessToken')
+        return !$session->offsetExists('FatchipFCSKlarnaAccessToken')
             || $amountChanged
             || $articleListChanged
             || $addressChanged
@@ -132,15 +132,15 @@ trait KlarnaPayments
     {
         $session = Shopware()->Session();
         $sessionVars = [
-            'FatchipCTKlarnaPaymentSessionResponsePayID',
-            'FatchipCTKlarnaPaymentSessionResponseTransID',
-            'FatchipCTKlarnaPaymentTokenExt',
-            'FatchipCTKlarnaPaymentArticleListBase64',
-            'FatchipCTKlarnaPaymentAmount',
-            'FatchipCTKlarnaPaymentAddressHash',
-            'FatchipCTKlarnaPaymentHash',
-            'FatchipCTKlarnaAccessToken',
-            'FatchipCTKlarnaPaymentDispatchID',
+            'FatchipFCSKlarnaPaymentSessionResponsePayID',
+            'FatchipFCSKlarnaPaymentSessionResponseTransID',
+            'FatchipFCSKlarnaPaymentTokenExt',
+            'FatchipFCSKlarnaPaymentArticleListBase64',
+            'FatchipFCSKlarnaPaymentAmount',
+            'FatchipFCSKlarnaPaymentAddressHash',
+            'FatchipFCSKlarnaPaymentHash',
+            'FatchipFCSKlarnaAccessToken',
+            'FatchipFCSKlarnaPaymentDispatchID',
             'CTError',
         ];
 
