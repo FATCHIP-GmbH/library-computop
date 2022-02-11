@@ -24,7 +24,7 @@
  * @link       https://www.computop.com
  */
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 /**
  * Class CTPaymentConfigForms
  * @package Fatchip\FCSPayment

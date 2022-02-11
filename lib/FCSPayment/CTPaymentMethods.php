@@ -1,6 +1,6 @@
 <?php
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 
 /**
  * Class CTPaymentMethods

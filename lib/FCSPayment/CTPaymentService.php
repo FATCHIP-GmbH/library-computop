@@ -24,7 +24,7 @@
  * @link      https://www.computop.com
  */
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 
 use Fatchip\FCSPayment\CTCrif\CRIF;
 use Fatchip\FCSPayment\CTPaymentMethodsIframe\Sofort;

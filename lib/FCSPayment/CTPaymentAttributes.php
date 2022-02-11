@@ -23,7 +23,7 @@
  * @link      https://www.computop.com
  */
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 
 /**
  * Class CTPaymentAttributes

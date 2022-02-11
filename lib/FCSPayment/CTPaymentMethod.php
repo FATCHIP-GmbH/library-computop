@@ -25,7 +25,7 @@
  * @license    <http://www.gnu.org/licenses/> GNU Lesser General Public License
  * @link       https://www.computop.com
  */
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 
 use Exception;
 

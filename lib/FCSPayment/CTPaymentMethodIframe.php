@@ -25,7 +25,7 @@
  * @link       https://www.computop.com
  */
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 
 use Fatchip\FCSPayment\CTOrder;
 use Shopware\Plugins\FatchipFCSPayment\Util;

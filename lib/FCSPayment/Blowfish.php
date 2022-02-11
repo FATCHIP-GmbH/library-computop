@@ -25,7 +25,7 @@
  * @link       https://www.computop.com
  */
 
-namespace Fatchip\CTPayment;
+namespace Fatchip\FCSPayment;
 /**
  * Class Blowfish
  * @package Fatchip\FCSPayment
