@@ -141,7 +141,7 @@ trait KlarnaPayments
             'FatchipFCSKlarnaPaymentHash',
             'FatchipFCSKlarnaAccessToken',
             'FatchipFCSKlarnaPaymentDispatchID',
-            'CTError',
+            'FCSError',
         ];
 
         foreach ($sessionVars as $sessionVar) {
