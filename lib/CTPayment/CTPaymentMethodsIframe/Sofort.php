@@ -36,7 +36,7 @@ use Fatchip\CTPayment\CTPaymentMethodIframe;
  */
 class Sofort extends CTPaymentMethodIframe
 {
-    const paymentClass = 'CreditCard';
+    const paymentClass = 'Sofort';
     /**
      * „Ident“ für Sofort Ident oder „ideal“ für Sofort iDEAL
      * Ident müssen wir nicht implementieren, macht nur identification
