@@ -551,6 +551,7 @@ class EasyCredit extends CTPaymentMethodIframe
 
         $this->setShippingAddress($order->getShippingAddress());
         $this->setBillingAddress($order->getBillingAddress());
+        $this->setEmail($order->getEmail());
 
         if ($order->getBillingAddress()) {
             $this->setFirstName($order->getBillingAddress()->getFirstName());

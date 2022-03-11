@@ -274,6 +274,8 @@ abstract class CTPaymentMethod extends Blowfish
             'invNo' => $klarnaInvNo,
             // used by creditcard 3DS 2
             'schemeReferenceID' => $schemeReferenceID,
+            // used by easyCredit refunds. possible values: WIDERRUF_VOLLSTAENDIG, WIDERRUF_TEILWEISE, RUECKGABE_GARANTIE_GEWAEHRLEISTUNG, MINDERUNG_GARANTIE_GEWAEHRLEISTUNG
+            'Reason' => 'WIDERRUF_VOLLSTAENDIG',
         ];
 
         return $params;
