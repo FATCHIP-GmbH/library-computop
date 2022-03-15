@@ -265,7 +265,8 @@ abstract class CTPaymentMethod extends Blowfish
      * @param null $schemeReferenceID
      * @return array
      */
-    public function getRefundParams($PayID, $Amount, $Currency, $transID = null, $xID = null, $orderDesc = null, $klarnaInvNo = null, $schemeReferenceID = null ) {
+    public function getRefundParams($PayID, $Amount, $Currency, $transID = null, $xID = null, $orderDesc = null, $klarnaInvNo = null, $schemeReferenceID = null, $orderAmount = null ) {
+        $reason = $Amount < $orderAmount ? 'WIDERRUF_TEILWEISE':'WIDERRUF_VOLLSTAENDIG';
         $params = [
             'payID' => $PayID,
             'amount' => $Amount,
@@ -281,7 +282,7 @@ abstract class CTPaymentMethod extends Blowfish
             // used by creditcard 3DS 2
             'schemeReferenceID' => $schemeReferenceID,
             // used by easyCredit refunds. possible values: WIDERRUF_VOLLSTAENDIG, WIDERRUF_TEILWEISE, RUECKGABE_GARANTIE_GEWAEHRLEISTUNG, MINDERUNG_GARANTIE_GEWAEHRLEISTUNG
-             'Reason' => 'WIDERRUF_VOLLSTAENDIG',
+             'Reason' => $reason,
         ];
 
         return $params;
