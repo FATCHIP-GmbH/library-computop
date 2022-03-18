@@ -277,10 +277,10 @@ class CTPaymentConfigForms
             'creditCardTemplate' => [
                 'name' => 'creditCardTemplate',
                 'type' => 'text',
-                'value' => 'ct_responsive_ch',
+                'value' => 'ct_responsive',
                 'label' => 'Kreditkarte - Template Name',
                 'required' => false,
-                'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible First Cash Solution-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
+                'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“.',
             ],
         ];
 
@@ -744,7 +744,7 @@ class CTPaymentConfigForms
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Kreditkarte - Template Name',
-                    'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das neugestaltete und abwärtskompatible First Cash Solution-Template nutzen möchten, übergeben Sie den Templatenamen „ct_compatible“. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“ oder "ct_responsive_ch".',
+                    'description' => 'Name der XSLT-Datei mit Ihrem individuellen Layout für das Bezahlformular. Wenn Sie das Responsive First Cash Solution-Template für mobile Endgeräte nutzen möchten, übergeben Sie den Templatenamen „ct_responsive“.',
                 ],
                 'idealDirektOderUeberSofort' => [
                     'label' => 'iDEAL - Dienst',
@@ -908,7 +908,7 @@ class CTPaymentConfigForms
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Creditcard - Template name',
-                    'description' => 'Name of the XSLT-file with your individual payment form layout. If you want to use the new an backward compatible computop template, please use the template name „ct_compatible“. If you want to use the responsive computop template for mobile devices, please use the template name „ct_compatible“ or "ct_responsive_ch".',
+                    'description' => 'Name of the XSLT-file with your individual payment form layout. If you want to use the responsive firstcash template for mobile devices, please use the template name „ct_responsive“.',
                 ],
                 'idealDirektOderUeberSofort' => [
                     'label' => 'iDEAL - Service',
@@ -1072,7 +1072,7 @@ class CTPaymentConfigForms
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Carte de crédit - Nom du modèle',
-                    'description' => 'Nom du fichier XSLT avec votre disposition de formulaire de paiment individuel. Si vous souhaitez utiliser le nouveau modèle computop retro-compatible, veuillez utiliser le nom de modèle "ct_compatible". Si vous souhaitez utiliser le modèle computop adaptable pour les appareils mobiles, veuillez utiliser le nom de modèle "ct_responsive" ou "ct_responsive_ch".',
+                    'description' => 'Nom du fichier XSLT avec votre disposition de formulaire de paiment individuel. Si vous souhaitez utiliser le modèle firstcash adaptable pour les appareils mobiles, veuillez utiliser le nom de modèle „ct_responsive“.',
                 ],
                 'idealDirektOderUeberSofort' => [
                     'label' => 'iDEAL - Service',
