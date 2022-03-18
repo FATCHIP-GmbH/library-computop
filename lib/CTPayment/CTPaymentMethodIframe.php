@@ -299,9 +299,9 @@ abstract class CTPaymentMethodIframe extends CTPaymentMethod
     /**
      * Language setter
      *
-     * @param $language
+     * @param string $language
      */
-    public function setLanguage($language)
+    public function setLanguage(string $language)
     {
         $this->language = $language;
     }
