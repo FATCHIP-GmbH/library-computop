@@ -38,9 +38,15 @@ abstract class CTPaymentMethod extends Blowfish
     const paymentClass = '';
 
     /**
-     * These params should not be send with the computop requests and are filtered out in prepareFirst Cash SolutionRequest
+     * These params should not be send with the computop requests and are filtered out in prepareComputopRequest
      */
-    const paramexcludes = ['MAC' => 'MAC', 'mac' => 'mac', 'blowfishPassword' => 'blowfishPassword', 'merchantID' => 'merchantID'];
+    const paramexcludes = [
+        'blowfishPassword' => 'blowfishPassword',
+        'Language' => 'Language',
+        'MAC' => 'MAC',
+        'mac' => 'mac',
+        'merchantID' => 'merchantID',
+    ];
 
     /**
      * Vom Paygate vergebene ID für die Zahlung. Z.B. zur Referenzierung in Batch-Dateien.
@@ -178,7 +184,7 @@ abstract class CTPaymentMethod extends Blowfish
      *
      * uses curl for api communication
      *
-     * @see prepareFirst Cash SolutionRequest()
+     * @see prepareComputopRequest()
      *
      * @param $ctRequest
      * @param $url
@@ -276,7 +282,7 @@ abstract class CTPaymentMethod extends Blowfish
             // used by creditcard 3DS 2
             'schemeReferenceID' => $schemeReferenceID,
             // used by easyCredit refunds. possible values: WIDERRUF_VOLLSTAENDIG, WIDERRUF_TEILWEISE, RUECKGABE_GARANTIE_GEWAEHRLEISTUNG, MINDERUNG_GARANTIE_GEWAEHRLEISTUNG
-            'Reason' => $reason,
+             'Reason' => $reason,
         ];
 
         return $params;
@@ -336,8 +342,8 @@ abstract class CTPaymentMethod extends Blowfish
      */
     public function getRefNrChangeParams($PayID, $RefNr) {
         $params = [
-          'payID' => $PayID,
-          'RefNr' => $RefNr,
+            'payID' => $PayID,
+            'RefNr' => $RefNr,
         ];
 
         return $params;
