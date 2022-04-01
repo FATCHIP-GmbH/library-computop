@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => '3fe24b7e464ca4186588475fb1668d51e17c7dd8',
+        'name' => '__root__',
+        'dev' => true,
+    ),
+    'versions' => array(
+        '__root__' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => '3fe24b7e464ca4186588475fb1668d51e17c7dd8',
+            'dev_requirement' => false,
+        ),
+        'theiconic/name-parser' => array(
+            'pretty_version' => 'v1.2.11',
+            'version' => '1.2.11.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../theiconic/name-parser',
+            'aliases' => array(),
+            'reference' => '9a54a713bf5b2e7fd990828147d42de16bf8a253',
+            'dev_requirement' => false,
+        ),
+        'viison/address-splitter' => array(
+            'pretty_version' => '0.3.4',
+            'version' => '0.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../viison/address-splitter',
+            'aliases' => array(),
+            'reference' => 'ebad709276aaadce94a3a1fe2507aa38a467a94a',
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,43 +1,103 @@
-[
-    {
-        "name": "viison/address-splitter",
-        "version": "0.3.1",
-        "version_normalized": "0.3.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/VIISON/AddressSplitting.git",
-            "reference": "6b8efbcead22f4cd98d963811aa93639e3210ed7"
+{
+    "packages": [
+        {
+            "name": "theiconic/name-parser",
+            "version": "v1.2.11",
+            "version_normalized": "1.2.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/theiconic/name-parser.git",
+                "reference": "9a54a713bf5b2e7fd990828147d42de16bf8a253"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/theiconic/name-parser/zipball/9a54a713bf5b2e7fd990828147d42de16bf8a253",
+                "reference": "9a54a713bf5b2e7fd990828147d42de16bf8a253",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "php-mock/php-mock-phpunit": "^2.1",
+                "phpunit/phpunit": "^7.0"
+            },
+            "time": "2019-11-14T14:08:48+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "TheIconic\\NameParser\\": [
+                        "src/",
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The Iconic",
+                    "email": "engineering@theiconic.com.au"
+                }
+            ],
+            "description": "PHP library for parsing a string containing a full name into its parts",
+            "support": {
+                "issues": "https://github.com/theiconic/name-parser/issues",
+                "source": "https://github.com/theiconic/name-parser/tree/v1.2.11"
+            },
+            "install-path": "../theiconic/name-parser"
         },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/VIISON/AddressSplitting/zipball/6b8efbcead22f4cd98d963811aa93639e3210ed7",
-            "reference": "6b8efbcead22f4cd98d963811aa93639e3210ed7",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2017-12-27T11:03:35+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "VIISON\\AddressSplitter\\": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "VIISON GmbH",
-                "email": "contact@viison.com"
-            }
-        ],
-        "description": "Tries to split an address line into street name, house number and other additional information like building, apartment information etc."
-    }
-]
+        {
+            "name": "viison/address-splitter",
+            "version": "0.3.4",
+            "version_normalized": "0.3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pickware/address-splitter.git",
+                "reference": "ebad709276aaadce94a3a1fe2507aa38a467a94a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pickware/address-splitter/zipball/ebad709276aaadce94a3a1fe2507aa38a467a94a",
+                "reference": "ebad709276aaadce94a3a1fe2507aa38a467a94a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "time": "2019-10-24T09:23:47+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "VIISON\\AddressSplitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "VIISON GmbH",
+                    "email": "contact@viison.com"
+                }
+            ],
+            "description": "Tries to split an address line into street name, house number and other additional information like building, apartment information etc.",
+            "support": {
+                "issues": "https://github.com/pickware/address-splitter/issues",
+                "source": "https://github.com/pickware/address-splitter/tree/0.3.4"
+            },
+            "install-path": "../viison/address-splitter"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

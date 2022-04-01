@@ -11,6 +11,10 @@ class ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80
         array (
             'VIISON\\AddressSplitter\\' => 23,
         ),
+        'T' => 
+        array (
+            'TheIconic\\NameParser\\' => 21,
+        ),
         'F' => 
         array (
             'Fatchip\\' => 8,
@@ -22,10 +26,19 @@ class ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80
         array (
             0 => __DIR__ . '/..' . '/viison/address-splitter/src',
         ),
+        'TheIconic\\NameParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/theiconic/name-parser/src',
+            1 => __DIR__ . '/..' . '/theiconic/name-parser/tests',
+        ),
         'Fatchip\\' => 
         array (
             0 => __DIR__ . '/../..' . '/lib',
         ),
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -33,6 +46,7 @@ class ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit9c0627b8c2a99a2a78dc19ccb8a90f80::$classMap;
 
         }, null, ClassLoader::class);
     }
