@@ -182,7 +182,7 @@ class CTPaymentMethods
                 'className' => 'Afterpay',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
-            [
+/*            [
                 'name' => 'fatchip_computop_afterpay_installment',
                 'shortname' => 'AfterpayInstallment',
                 'description' => 'Computop Afterpay Ratenzahlung',
@@ -192,5 +192,6 @@ class CTPaymentMethods
                 'className' => 'Afterpay',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
+*/
         ];
 }
