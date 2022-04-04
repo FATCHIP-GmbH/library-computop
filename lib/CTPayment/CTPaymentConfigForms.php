@@ -96,6 +96,11 @@ class CTPaymentConfigForms
                             'en_GB' => 'enable logging',
                             'fr_FR' => 'activer la journalisation',
                         ]],
+                        ['extended', [
+                            'de_DE' => 'erweiterte Protokollierung',
+                            'en_GB' => 'enable extra logging',
+                            'fr_FR' => 'activer la journalisation supplémentaire',
+                        ]],
                     ],
                 'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis.<BR>',
            ],
