@@ -750,10 +750,10 @@ class CTPaymentConfigForms
                     'label' => 'iDEAL - Dienst',
                     'description' => 'Ideal Zahlungen können direkt über Ideal oder über PPRO abgewickelt werden',
                 ],
-                'lastschriftDienst' => [
+                /*'lastschriftDienst' => [
                     'label' => 'Lastschrift - Dienst',
                     'description' => 'Lastschrift Zahlungen können direkt abgewickelt werden.',
-                ],
+                ],*/
                 'lastschriftCaption' => [
                     'label' => 'Lastschrift - Capture Modus',
                     'description' => '<b>AUTO</b>: Reservierte Beträge werden sofort automatisch eingezogen.<BR>
@@ -914,10 +914,10 @@ class CTPaymentConfigForms
                     'label' => 'iDEAL - Service',
                     'description' => 'iDEAL payments can be handled by using direct (Sofort) or PPRO.',
                 ],
-                'lastschriftDienst' => [
-                    'label' => 'Direct debit - Service',
-                    'description' => 'Direct debit payments will be handeled directly.',
-                ],
+                //'lastschriftDienst' => [
+                //    'label' => 'Direct debit - Service',
+                //    'description' => 'Direct debit payments will be handeled directly.',
+                //],
                 'lastschriftCaption' => [
                     'label' => 'Direct debit - Capture Mode',
                     'description' => '<b>AUTO</b>: Reserved amounts will be captured automatically.<BR>
@@ -1079,10 +1079,10 @@ class CTPaymentConfigForms
                     'description' => 'iDEAL payments can be handled by using direct (Sofort) or PPRO.',
                     'description' => 'Les paiements iDEAL peuvent être gérés en utilisant direct (Sofort) ou PPRO.',
                 ],
-                'lastschriftDienst' => [
-                    'label' => 'Direct debit - Service',
-                    'description' => 'Les paiements par prélèvement peuvent être gérés en utilisant direct, EVO ou INTERCARD.',
-                ],
+                //'lastschriftDienst' => [
+                //    'label' => 'Direct debit - Service',
+                //    'description' => 'Les paiements par prélèvement peuvent être gérés en utilisant direct, EVO ou INTERCARD.',
+                //],
                 'lastschriftCaption' => [
                     'label' => 'Direct debit - Mode de débit',
                     'description' => '<b>AUTO</b>: Les montants réservés seront débités automatiquement.<BR>
