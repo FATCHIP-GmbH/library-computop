@@ -597,7 +597,7 @@ class CTPaymentConfigForms
             ],
         ];
 
-    const formBonitaetElements =
+/*    const formBonitaetElements =
         [
             'bonitaetusereturnaddress' => [
                 'name' => 'bonitaetusereturnaddress',
@@ -615,7 +615,7 @@ class CTPaymentConfigForms
                 'required' => false,
                 'description' => 'Stellen Sie hier ein, wie lange ein bereits durchgeführte Bontitätsprüfung gültig bleibt',
             ],
-        ];
+        ];*/
 
 /*    const formBonitaetSelectElements =
         [
