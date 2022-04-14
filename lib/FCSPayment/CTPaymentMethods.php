@@ -130,7 +130,7 @@ class CTPaymentMethods
                 'className' => 'PaypalExpress',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
-            [
+/*            [
                 'name' => 'fatchip_firstcash_postfinance',
                 'shortname' => 'Postfinance',
                 'description' => 'First Cash Solution Postfinance',
@@ -139,8 +139,8 @@ class CTPaymentMethods
                 'additionalDescription' => '',
                 'className' => 'PostFinance',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
-            ],
-            [
+            ],*/
+/*            [
                 'name' => 'fatchip_firstcash_przelewy24',
                 'shortname' => 'Przelewy24',
                 'description' => 'First Cash Solution Przelewy24',
@@ -150,7 +150,7 @@ class CTPaymentMethods
                 'additionalDescription' => '',
                 'className' => 'Przelewy24',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
-            ],
+            ],*/
             [
                 'name' => 'fatchip_firstcash_sofort',
                 'shortname' => 'SOFORT',
@@ -172,7 +172,7 @@ class CTPaymentMethods
                 'className' => 'AmazonPay',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
-            [
+/*            [
                 'name' => 'fatchip_firstcash_afterpay_invoice',
                 'shortname' => 'AfterpayInvoice',
                 'description' => 'First Cash Solution Afterpay Rechnung',
@@ -181,7 +181,7 @@ class CTPaymentMethods
                 'additionalDescription' => '',
                 'className' => 'Afterpay',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
-            ],
+            ],*/
 /*            [
                 'name' => 'fatchip_firstcash_afterpay_installment',
                 'shortname' => 'AfterpayInstallment',
