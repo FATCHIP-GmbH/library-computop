@@ -77,6 +77,24 @@ class Przelewy24 extends CTPaymentMethodIframe
         $this->setAccOwner($order->getBillingAddress()->getFirstName . ' ' . $order->getBillingAddress()->getLastName());
         $this->setEmail($order->getEmail());
         $this->setAccOwner($order->getBillingAddress()->getFirstName . ' ' . $order->getBillingAddress()->getLastName());
+        if ($config['debuglog'] === 'extended') {
+            $this->setCustom();
+        }
+    }
+
+    /**
+     * Send the user sessionid in the custom field
+     * CT returns the custom parameter unencrypted in the requests response.
+     * This is used for restoring a lost session after redirects
+     */
+    public function setCustom()
+    {
+        $module = Shopware()->Container()->get('front')->Request()->getModuleName();
+        if ($module !== 'backend') {
+            $this->Custom = 'session=' . Shopware()->Modules()->Admin()->sSYSTEM->sSESSION_ID;
+        } else {
+            $this->Custom = '';
+        }
     }
 
     /**

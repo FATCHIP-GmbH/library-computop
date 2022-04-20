@@ -71,6 +71,24 @@ class Ideal extends CTPaymentMethodIframe
         $this->setUrlSuccess($urlSuccess);
         $this->setUrlFailure($urlFailure);
         $this->setUrlNotify($urlNotify);
+        if ($config['debuglog'] === 'extended') {
+            $this->setCustom();
+        }
+    }
+
+    /**
+     * Send the user sessionid in the custom field
+     * CT returns the custom parameter unencrypted in the reuqests response.
+     * This is only used for restoring the session after iframe payments as a workaround for Safari 6+ browsers
+     */
+    public function setCustom()
+    {
+        $module = Shopware()->Container()->get('front')->Request()->getModuleName();
+        if ($module !== 'backend') {
+            $this->Custom = 'session=' . Shopware()->Modules()->Admin()->sSYSTEM->sSESSION_ID;
+        } else {
+            $this->Custom = '';
+        }
     }
 
     /**
