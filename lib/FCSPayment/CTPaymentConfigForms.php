@@ -305,7 +305,7 @@ class CTPaymentConfigForms
 
     const formLastschriftSelectElements =
         [
-            /*'lastschriftDienst' => [
+            'lastschriftDienst' => [
                 'name' => 'lastschriftDienst',
                 'type' => 'select',
                 'value' => 'DIREKT',
@@ -319,6 +319,7 @@ class CTPaymentConfigForms
                             'en_GB' => 'direct',
                             'fr_FR' => 'direct',
                         ]],
+                        /*
                         ['EVO', [
                             'de_DE' => 'EVO Payments',
                             'en_GB' => 'EVO Payments',
@@ -329,9 +330,10 @@ class CTPaymentConfigForms
                             'en_GB' => 'Intercard',
                             'fr_FR' => 'Intercard',
                         ]],
+                        */
                     ],
                 'description' => 'Lastschrift Zahlungen können direkt, über EVO oder über INTERCARD abgewickelt werden.',
-            ],*/
+            ],
             'lastschriftCaption' => [
                 'name' => 'lastschriftCaption',
                 'type' => 'select',
@@ -750,10 +752,10 @@ class CTPaymentConfigForms
                     'label' => 'iDEAL - Dienst',
                     'description' => 'Ideal Zahlungen können direkt über Ideal oder über PPRO abgewickelt werden',
                 ],
-                /*'lastschriftDienst' => [
+                'lastschriftDienst' => [
                     'label' => 'Lastschrift - Dienst',
                     'description' => 'Lastschrift Zahlungen können direkt abgewickelt werden.',
-                ],*/
+                ],
                 'lastschriftCaption' => [
                     'label' => 'Lastschrift - Capture Modus',
                     'description' => '<b>AUTO</b>: Reservierte Beträge werden sofort automatisch eingezogen.<BR>
