@@ -319,6 +319,7 @@ class CTPaymentConfigForms
                             'en_GB' => 'direct',
                             'fr_FR' => 'direct',
                         ]],
+                        /*
                         ['EVO', [
                             'de_DE' => 'EVO Payments',
                             'en_GB' => 'EVO Payments',
@@ -329,6 +330,7 @@ class CTPaymentConfigForms
                             'en_GB' => 'Intercard',
                             'fr_FR' => 'Intercard',
                         ]],
+                        */
                     ],
                 'description' => 'Lastschrift Zahlungen können direkt, über EVO oder über INTERCARD abgewickelt werden.',
             ],
@@ -597,7 +599,7 @@ class CTPaymentConfigForms
             ],
         ];
 
-    const formBonitaetElements =
+/*    const formBonitaetElements =
         [
             'bonitaetusereturnaddress' => [
                 'name' => 'bonitaetusereturnaddress',
@@ -615,9 +617,9 @@ class CTPaymentConfigForms
                 'required' => false,
                 'description' => 'Stellen Sie hier ein, wie lange ein bereits durchgeführte Bontitätsprüfung gültig bleibt',
             ],
-        ];
+        ];*/
 
-    const formBonitaetSelectElements =
+/*    const formBonitaetSelectElements =
         [
             'crifmethod' => [
                 'name' => 'crifmethod',
@@ -649,7 +651,7 @@ class CTPaymentConfigForms
                                   "First Cash Risikoampel IST <Farbe>"<BR>und<BR>
                                   "First Cash Risikoampel IST NICHT <Farbe>"<BR>',
             ],
-        ];
+        ];*/
 
     const formKlarnaTextElements =
         [
@@ -752,7 +754,7 @@ class CTPaymentConfigForms
                 ],
                 'lastschriftDienst' => [
                     'label' => 'Lastschrift - Dienst',
-                    'description' => 'Lastschrift Zahlungen können direkt, über EVO oder über INTERCARD abgewickelt werden.',
+                    'description' => 'Lastschrift Zahlungen können direkt abgewickelt werden.',
                 ],
                 'lastschriftCaption' => [
                     'label' => 'Lastschrift - Capture Modus',
@@ -816,7 +818,7 @@ class CTPaymentConfigForms
                                   Das Aussehen der verschiedenen Buttons.<BR>
                                   Klicken Sie links auf den Link "AmazonPay - Button Größe"',
                 ],
-                'bonitaetusereturnaddress' => [
+                /*'bonitaetusereturnaddress' => [
                     'label' => 'Bonitätsprüfung - Zurückgelieferte Adressdaten verwenden',
                     'description' => 'Ersetzt die Rechnungsaddresse mit u.U. korrigierten Adressen aus der Bonitätsprüfung',
                 ],
@@ -830,7 +832,7 @@ class CTPaymentConfigForms
                                   Erstellen Sie unter "Einstellungen->Riskmanagement" Regeln mit den Bedingungen<BR>
                                   "First Cash Risikoampel IST <Farbe>"<BR>und<BR>
                                   "First Cash Risikoampel IST NICHT <Farbe>"<BR>',
-                ],
+                ],*/
                 'klarnaaction' => [
                     'label' => 'Klarna Aktionscode',
                     'description' => 'Der Wert ist von Laufzeiten und Monatsraten abhängig, die Sie mit Klarna vereinbart haben. Dieser Wert kann per Subshop unterschiedlich sein.',
@@ -914,10 +916,10 @@ class CTPaymentConfigForms
                     'label' => 'iDEAL - Service',
                     'description' => 'iDEAL payments can be handled by using direct (Sofort) or PPRO.',
                 ],
-                'lastschriftDienst' => [
-                    'label' => 'Direct debit - Service',
-                    'description' => 'Direct debit payments can be handled by using direct, EVO or INTERCARD',
-                ],
+                //'lastschriftDienst' => [
+                //    'label' => 'Direct debit - Service',
+                //    'description' => 'Direct debit payments will be handeled directly.',
+                //],
                 'lastschriftCaption' => [
                     'label' => 'Direct debit - Capture Mode',
                     'description' => '<b>AUTO</b>: Reserved amounts will be captured automatically.<BR>
@@ -980,7 +982,7 @@ class CTPaymentConfigForms
                                   The look of the different button.<BR>
                                   Please click on the left link "AmazonPay - Button Size"',
                 ],
-                'bonitaetusereturnaddress' => [
+                /*'bonitaetusereturnaddress' => [
                     'label' => 'Credit check  - Use customer addresses from credit check response',
                     'description' => 'Replaces the customers addresses with the addresses from the credit check response',
                 ],
@@ -994,7 +996,7 @@ class CTPaymentConfigForms
                                   Create your own rules in "Riskmanagement" with the conditions <BR>
                                   "First Cash Traffic light IS <Color>"<BR>and<BR>
                                   "First Cash Traffic light IST NOT <Color>"<BR>',
-                ],
+                ],*/
                 'klarnaaction' => [
                     'label' => 'Klarna action code',
                     'description' => 'This value depends on durations and monthly rates term you arranged with Klarna. This value can be different for each subshop.',
@@ -1079,10 +1081,10 @@ class CTPaymentConfigForms
                     'description' => 'iDEAL payments can be handled by using direct (Sofort) or PPRO.',
                     'description' => 'Les paiements iDEAL peuvent être gérés en utilisant direct (Sofort) ou PPRO.',
                 ],
-                'lastschriftDienst' => [
-                    'label' => 'Direct debit - Service',
-                    'description' => 'Les paiements par prélèvement peuvent être gérés en utilisant direct, EVO ou INTERCARD.',
-                ],
+                //'lastschriftDienst' => [
+                //    'label' => 'Direct debit - Service',
+                //    'description' => 'Les paiements par prélèvement peuvent être gérés en utilisant direct, EVO ou INTERCARD.',
+                //],
                 'lastschriftCaption' => [
                     'label' => 'Direct debit - Mode de débit',
                     'description' => '<b>AUTO</b>: Les montants réservés seront débités automatiquement.<BR>
@@ -1145,7 +1147,7 @@ class CTPaymentConfigForms
                                   L\'aspect des différents boutons.<BR>
                                   Veuillez cliquer sur le lien à gauche "AmazonPay - Taille de bouton"',
                 ],
-                'bonitaetusereturnaddress' => [
+                /*'bonitaetusereturnaddress' => [
                     'label' => 'Vérification de crédit  - Utiliser l\'adresse du client de la vérification de crédit',
                     'description' => 'Remplace l\'adresse du client par celle reçue dans la réponse de vérification de crédit',
                 ],
@@ -1159,7 +1161,7 @@ class CTPaymentConfigForms
                                   Créez vos propre règles dans "Gestion de risque" avec les conditions <BR>
                                   "First Cash Traffic light IS <Color>"<BR>et<BR>
                                   "First Cash Traffic light IST NOT <Color>"<BR>',
-                ],
+                ],*/
                 'klarnaaction' => [
                     'label' => 'Code action Klarna',
                     'description' => 'Cette valeur dépend de la durée et des termes de taux mensuels que vous avez convenus avec Klarna. Cette valeur peut différer entre chaque sous-boutique.',
