@@ -42,7 +42,7 @@ abstract class Lastschrift extends CTPaymentMethodIframe
    * Wenn Sie das neugestaltete und abwärtskompatible First Cash Solution-template nut-zen möchten,
    * übergeben Sie den Templatenamen „ct_compatible“.
    * Wenn Sie das Responsive First Cash Solution-template für mobile Endgeräte nutzen möchten,
-   * übergeben Sie den Templatenamen „ct_responsive“.
+   * übergeben Sie den Templatenamen „1cs_cards_v1“.
    *
    * @var string
    */
