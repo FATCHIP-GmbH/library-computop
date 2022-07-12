@@ -216,7 +216,7 @@ class CreditCard extends CTPaymentMethodIframe
     {
         $module = Shopware()->Container()->get('front')->Request()->getModuleName();
         if ($module !== 'backend') {
-            $this->Custom = 'session=' . Shopware()->Modules()->Admin()->sSYSTEM->sSESSION_ID;
+            $this->Custom = 'session=' . Shopware()->Session()->getId();
         } else {
             $this->Custom = '';
         }
