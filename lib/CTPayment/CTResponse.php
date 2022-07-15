@@ -512,6 +512,10 @@ class CTResponse
      */
     protected $schemeReferenceID;
 
+    protected $card;
+
+    protected $CardHolder;
+
     /**
      * CTResponse constructor
      * @param array $params
@@ -1809,5 +1813,37 @@ class CTResponse
     public function setSchemeReferenceID(string $schemeReferenceID)
     {
         $this->schemeReferenceID = $schemeReferenceID;
+    }
+
+    /**
+     * @ignore <description>
+     * @return string
+     */
+    public function getCard() {
+        return base64_decode($this->card);
+    }
+
+    /**
+     * @ignore <description>
+     * @param string $card
+     */
+    public function setCard($card) {
+        $this->card = $card;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCardHolder()
+    {
+        return $this->CardHolder;
+    }
+
+    /**
+     * @param string $cardHolder
+     */
+    public function setCardHolder(string $cardHolder)
+    {
+        $this->CardHolder = $cardHolder;
     }
 }
