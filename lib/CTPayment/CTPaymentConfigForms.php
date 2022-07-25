@@ -713,7 +713,8 @@ class CTPaymentConfigForms
                 'creditCardMode' => [
                     'label' => 'Kreditkarte - Modus',
                     'description' => '<b>IFrame</b>: Kreditkartendaten werden nach klick auf "Zahlungsplichtig bestellen" in ein IFrame eingegeben<BR>
-                                  <b>Silent Mode</b>: Kreditkartendaten werden auf der Seite "Prüfen und Bestellen" eingegeben.<BR>',
+                                  <b>Silent Mode</b>: Kreditkartendaten werden auf der Seite "Prüfen und Bestellen" eingegeben.<BR>
+								  <b>Payment Page</b>: Kreditkartendaten werden nach klick auf "Zahlungsplichtig bestellen" in einem blanken Fenster eingegeben<BR>',
                 ],
                 'creditCardTestMode' => [
                     'label' => 'Kreditkarte - Test-Modus',
@@ -878,7 +879,8 @@ class CTPaymentConfigForms
                 'creditCardMode' => [
                     'label' => 'Creditcard - Mode',
                     'description' => '<b>IFrame</b>: The creditcard form will be displayed after clicking "confirm payment" in an iframe<BR>
-                                  <b>Silent Mode</b>: The creditcard form will be displayed on the "complete order" page.<BR>',
+                                  <b>Silent Mode</b>: The creditcard form will be displayed on the "complete order" page.<BR>
+                                  <b>Payment Page</b>: Credit card details are entered in a blank page after clicking on "Order payment".',
                 ],
                 'creditCardTestMode' => [
                     'label' => 'Creditcard - Testmode',
@@ -1042,7 +1044,8 @@ class CTPaymentConfigForms
                 'creditCardMode' => [
                     'label' => 'Carte de crédit - Mode',
                     'description' => '<b>IFrame</b>: Le formulaire sera affiché après avoir cliqué sur "Confirmer le paiement" dans un iframe<BR>
-                                  <b>Mode silencieux</b>: Le formulaire sera affiché sur la page "Vérifier et Commander".<BR>',
+                                  <b>Mode silencieux</b>: Le formulaire sera affiché sur la page "Vérifier et Commander".<BR>
+                                  <b>Payment Page</b>: Les coordonnées de la carte de crédit sont saisies dans une fenêtre vierge après avoir cliqué sur "Commande avec obligation de paiement".',
                 ],
                 'creditCardTestMode' => [
                     'label' => 'Carte de crédit - Mode test',
