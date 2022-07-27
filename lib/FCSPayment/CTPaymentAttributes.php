@@ -88,6 +88,9 @@ class CTPaymentAttributes
         'kreditkarteschemereferenceid' => [
             'type' => 'VARCHAR(255)',
         ],
+        'kreditkartecardholdername' => [
+            'type' => 'VARCHAR(255)',
+        ],
     ];
 
     /**

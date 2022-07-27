@@ -216,7 +216,7 @@ class CreditCard extends CTPaymentMethodIframe
     {
         $module = Shopware()->Container()->get('front')->Request()->getModuleName();
         if ($module !== 'backend') {
-            $this->Custom = 'session=' . Shopware()->Modules()->Admin()->sSYSTEM->sSESSION_ID;
+            $this->Custom = 'session=' . Shopware()->Session()->getId();
         } else {
             $this->Custom = '';
         }
@@ -444,9 +444,9 @@ class CreditCard extends CTPaymentMethodIframe
     /**
      * return string
      */
-    public function setCredentialsOnFile($initalPayment = true)
+    public function setCredentialsOnFile($unscheduled = 'CIT', $initalPayment = true)
     {
-        $credentialsOnFile['type']['unscheduled'] = 'CIT';
+        $credentialsOnFile['type']['unscheduled'] = $unscheduled;
         $credentialsOnFile['initialPayment'] = $initalPayment;
         $this->credentialOnFile = base64_encode(json_encode($credentialsOnFile));
     }
