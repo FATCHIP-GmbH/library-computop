@@ -111,7 +111,7 @@ class CTPaymentConfigForms
             'creditCardMode' => [
                 'name' => 'creditCardMode',
                 'type' => 'select',
-                'value' => 'IFrame',
+                'value' => 'IFRAME',
                 'label' => 'Kreditkarte - Modus',
                 'required' => false,
                 'editable' => false,
