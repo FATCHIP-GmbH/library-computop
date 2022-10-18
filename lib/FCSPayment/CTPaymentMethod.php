@@ -283,6 +283,7 @@ abstract class CTPaymentMethod extends Blowfish
             'schemeReferenceID' => $schemeReferenceID,
             // used by easyCredit refunds. possible values: WIDERRUF_VOLLSTAENDIG, WIDERRUF_TEILWEISE, RUECKGABE_GARANTIE_GEWAEHRLEISTUNG, MINDERUNG_GARANTIE_GEWAEHRLEISTUNG
              'Reason' => $reason,
+            'Custom'  => $this->Custom,
         ];
 
         return $params;

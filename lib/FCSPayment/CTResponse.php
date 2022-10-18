@@ -516,6 +516,8 @@ class CTResponse
 
     protected $CardHolder;
 
+    protected $orderVars;
+
     /**
      * CTResponse constructor
      * @param array $params
@@ -1845,5 +1847,21 @@ class CTResponse
     public function setCardHolder(string $cardHolder)
     {
         $this->CardHolder = $cardHolder;
+    }
+
+    /**
+     *
+     */
+    public function getOrderVars()
+    {
+        return $this->orderVars;
+    }
+
+    /**
+     * @param $orderVars
+     */
+    public function setOrderVars($orderVars)
+    {
+        $this->orderVars = $orderVars;
     }
 }
