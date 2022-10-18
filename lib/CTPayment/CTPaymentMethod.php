@@ -66,6 +66,35 @@ abstract class CTPaymentMethod extends Blowfish
 
     protected $utils;
 
+//    protected $Custom;
+
+    /**
+     * Send the user sessionid in the custom field
+     * CT returns the custom parameter unencrypted in the reuqests response.
+     * This is only used for restoring the session after iframe payments as a workaround for Safari 6+ browsers
+     */
+/*    public function setCustom()
+    {
+        $articleList = [];
+
+        foreach (Shopware()->Modules()->Basket()->sGetBasket()['content'] as $item) {
+            $quantity = (int)$item['quantity'];
+            $itemTaxAmount = round(str_replace(',', '.', $item['tax']) * 100);
+            $totalAmount = round(str_replace(',', '.', $item['price']) * 100) * $quantity;
+            $articleList[] = [
+                'name' => $item['articlename'],
+                'quantity' => $quantity,
+                'unit_price' => round($item['priceNumeric'] * 100),
+                'total_amount' => $totalAmount,
+                'tax_rate' => $item['tax_rate'] * 100,
+                'total_tax_amount' => $itemTaxAmount,
+            ];
+        }
+        $orderVariables = json_encode($articleList);
+        $this->Custom = 'session=' . Shopware()->Modules()->Admin()->sSYSTEM->sSESSION_ID . '&orderVars=' . base64_encode($orderVariables);
+    }
+*/
+
     public function __construct()
     {
         /** @noinspection PhpUndefinedMethodInspection */
@@ -283,6 +312,7 @@ abstract class CTPaymentMethod extends Blowfish
             'schemeReferenceID' => $schemeReferenceID,
             // used by easyCredit refunds. possible values: WIDERRUF_VOLLSTAENDIG, WIDERRUF_TEILWEISE, RUECKGABE_GARANTIE_GEWAEHRLEISTUNG, MINDERUNG_GARANTIE_GEWAEHRLEISTUNG
              'Reason' => $reason,
+            'Custom'  => $this->Custom,
         ];
 
         return $params;
