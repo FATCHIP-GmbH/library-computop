@@ -546,7 +546,7 @@ class CTPaymentConfigForms
                 'name' => 'amazonButtonType',
                 'type' => 'select',
                 'value' => 'PwA',
-                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank">AmazonPay - Button Typ</a>',
+                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Typ</a>',
                 'required' => false,
                 'editable' => false,
                 'store' =>
@@ -565,7 +565,7 @@ class CTPaymentConfigForms
                 'name' => 'amazonButtonColor',
                 'type' => 'select',
                 'value' => 'Gold',
-                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank">AmazonPay - Button Farbe</a>',
+                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Farbe</a>',
                 'required' => 'true',
                 'editable' => false,
                 'store' =>
@@ -582,7 +582,7 @@ class CTPaymentConfigForms
                 'name' => 'amazonButtonSize',
                 'type' => 'select',
                 'value' => 'medium',
-                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank">AmazonPay - Button Größe</a>',
+                'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Größe</a>',
                 'required' => 'true',
                 'editable' => false,
                 'store' =>
@@ -807,19 +807,19 @@ class CTPaymentConfigForms
                                   <b>Manuell</b>: Geldeinzüge werden von Ihnen manuell im Shopbackend durchgeführt.',
                 ],
                 'amazonButtonType' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank">AmazonPay - Button Typ</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Typ</a>',
                     'description' => 'Typ des Amazon Buttons<BR>
                                   Das Aussehen der verschiedenen Buttons.<BR>
                                   Klicken Sie links auf den Link "AmazonPay - Button Typ"',
                 ],
                 'amazonButtonColor' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank">AmazonPay - Button Farbe</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Farbe</a>',
                     'description' => 'Farbe des Amazon Buttons<BR>
                                   Das Aussehen der verschiedenen Buttons.<BR>
                                   Klicken Sie links auf den Link "AmazonPay - Button Farbe"',
                 ],
                 'amazonButtonSize' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank">AmazonPay - Button Größe</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Button Größe</a>',
                     'description' => 'Größe des Amazon Buttons<BR>
                                   Das Aussehen der verschiedenen Buttons.<BR>
                                   Klicken Sie links auf den Link "AmazonPay - Button Größe"',
@@ -972,19 +972,19 @@ class CTPaymentConfigForms
                                   <b>MANUAL</b>: Reserverd amounts have to be captured manuelly in the shop backend.',
                 ],
                 'amazonButtonType' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank">AmazonPay - Button Type</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank" rel="noopener">AmazonPay - Button Type</a>',
                     'description' => 'Type of the Amazon button<BR>
                                   The look of the different buttons.<BR>
                                   Please click on the left link "AmazonPay - Button Type"',
                 ],
                 'amazonButtonColor' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank">AmazonPay - Button Color</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank" rel="noopener">AmazonPay - Button Color</a>',
                     'description' => 'Color of the Amazon button<BR>
                                   The look of the different button.<BR>
                                   Please click on the left link "AmazonPay - Button Color"',
                 ],
                 'amazonButtonSize' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank">AmazonPay - Button Size</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank" rel="noopener">AmazonPay - Button Size</a>',
                     'description' => 'Size of the amazon button<BR>
                                   The look of the different button.<BR>
                                   Please click on the left link "AmazonPay - Button Size"',
@@ -1138,19 +1138,19 @@ class CTPaymentConfigForms
                                   <b>MANUEL</b>: Les montants réservés doivent être débités manuellement via l\'administration de la boutique.',
                 ],
                 'amazonButtonType' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank">AmazonPay - Type de bouton</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_TYPE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Type de bouton</a>',
                     'description' => 'Type du bouton Amazon<BR>
                                   L\'aspect des différents boutons.<BR>
                                   Veuillez cliquer sur le lien à gauche "AmazonPay - Type de bouton"',
                 ],
                 'amazonButtonColor' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank">AmazonPay - Couleur de bouton</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_COLOR_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Couleur de bouton</a>',
                     'description' => 'Couleur du bouton Amazon<BR>
                                   L\'aspect des différents boutons.<BR>
                                   Veuillez cliquer sur le lien à gauche "AmazonPay - Couleur de bouton"',
                 ],
                 'amazonButtonSize' => [
-                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank">AmazonPay - Taille de bouton</a>',
+                    'label' => '<a href="https://pay.amazon.com/de/developer/documentation/lpwa/201952050#ENTER_SIZE_PARAMETER" target="_blank" rel="noopener" >AmazonPay - Taille de bouton</a>',
                     'description' => 'Taille du bouton Amazon<BR>
                                   L\'aspect des différents boutons.<BR>
                                   Veuillez cliquer sur le lien à gauche "AmazonPay - Taille de bouton"',
