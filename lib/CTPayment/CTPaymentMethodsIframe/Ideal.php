@@ -37,6 +37,8 @@ use Fatchip\CTPayment\CTPaymentMethodIframe;
 class Ideal extends CTPaymentMethodIframe
 {
 
+     const paymentClass = 'Ideal';
+
     /**
      * Nicht bei PPRO: BIC der ausgewählten Bank (siehe Abfrage der hinterlegten iDEAL-Banken)
      *

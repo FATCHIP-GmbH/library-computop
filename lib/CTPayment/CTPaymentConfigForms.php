@@ -698,6 +698,12 @@ class CTPaymentConfigForms
                     'label' => 'Blowfish Password',
                     'description' => 'Ihr Verschlüsselungs-Passwort',
                 ],
+                'fatchip_computop_apitest_button' => [
+                    'label' => '<strong>API Zugang Testen (Erst Speichern und Caches leeren)<strong>',
+                ],
+                'fatchip_compputop_ideal_button' => [
+                    'label' => '<strong>iDeal Banken aktualisieren <strong>',
+                ],
                 'prefixOrdernumber' => [
                     'label' => 'Bestellnummer Präfix',
                     'description' => 'Präfix für Bestellnummern. Sie können folgende Platzhalter verwenden: %transid% , %payid%, %xid%',
@@ -864,6 +870,12 @@ class CTPaymentConfigForms
                     'label' => 'Blowfish Password',
                     'description' => 'Your blowfish password',
                 ],
+                'fatchip_computop_apitest_button' => [
+                    'label' => '<strong>test API credentials (Save and clear cache first)<strong>',
+                ],
+                'fatchip_computop_ideal_button' => [
+                    'label' => '<strong>update iDeal banks<strong>',
+                ],
                 'prefixOrdernumber' => [
                     'label' => 'Ordernumber prefix',
                     'description' => 'Prefix for ordernumbers. You can use the following placeholders: %transid% , %payid%, %xid%',
@@ -1028,6 +1040,12 @@ class CTPaymentConfigForms
                 'blowfishPassword' => [
                     'label' => 'Mot de passe Blowfish',
                     'description' => 'Votre mot de passe Blowfish',
+                ],
+                'fatchip_computop_apitest_button' => [
+                    'label' => '<strong>Tester les données d`accès API (Enregistrer d`abord et vider le cache)<strong>',
+                ],
+                'fatchip_computop_ideal_button' => [
+                    'label' => '<strong>Actualiser les iDeal banques<strong>',
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Préfixe de numéro de commande',

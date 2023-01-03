@@ -37,7 +37,7 @@ class CTEnumLanguages
 {
     const DEFAULT_LANGUAGE = 'de';
 
-    // ISO-639-1 codes of languages supported by CompuTop
+    // ISO-639-1 codes of languages supported by Computop
     const supportedLanguages = [
         'de',
         'al',
@@ -79,7 +79,7 @@ class CTEnumLanguages
     ];
 
     /**
-     * Determine the CompuTop language code to use for a given ISO-631-1 language
+     * Determine the Computop language code to use for a given ISO-631-1 language
      *
      * @param string|null $isoLanguage
      * @return mixed|string
