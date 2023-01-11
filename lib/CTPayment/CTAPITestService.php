@@ -27,10 +27,10 @@
 namespace Fatchip\CTPayment;
 
 use Exception;
-use Fatchip\FCSPayment\CTPaymentMethodsIframe\CreditCard;
+use Fatchip\CTPayment\CTPaymentMethodsIframe\CreditCard;
 
 /**
- * Class CTIdealIssuerService.
+ * Class CTAPITestService.
  *
  *  gets supported ideal financial institutes from the computop api
  *  as a fallback an array is returned
