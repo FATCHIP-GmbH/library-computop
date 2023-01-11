@@ -701,7 +701,7 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>API Zugang Testen (Erst Speichern und Caches leeren)<strong>',
                 ],
-                'fatchip_compputop_ideal_button' => [
+                'fatchip_computop_ideal_button' => [
                     'label' => '<strong>iDeal Banken aktualisieren <strong>',
                 ],
                 'prefixOrdernumber' => [
