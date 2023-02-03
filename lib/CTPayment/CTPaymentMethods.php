@@ -51,16 +51,6 @@ class CTPaymentMethods
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
             [
-                'name' => 'fatchip_computop_klarna_pay_now',
-                'shortname' => 'Klarna Pay now',
-                'description' => 'Computop Klarna Pay now',
-                'action' => 'FatchipCTKlarnaPayments',
-                'template' => 'fatchip_computop_klarna_pay_now.tpl',
-                'additionalDescription' => '',
-                'className' => 'KlarnaPayments',
-                //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
-            ],
-            [
                 'name' => 'fatchip_computop_klarna_pay_later',
                 'shortname' => 'Klarna Pay later',
                 'description' => 'Computop Klarna Pay later',
