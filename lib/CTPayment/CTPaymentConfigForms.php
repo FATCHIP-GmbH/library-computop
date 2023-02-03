@@ -273,6 +273,28 @@ class CTPaymentConfigForms
                                   Bei einer angeforderten Kontoverifizierung ist der übermittelte Betrag optional und <BR>
                                   wird für die tatsächliche Zahlungstransaktion ignoriert (z.B. Autorisierung).',
             ],
+            'creditCardSilentModeBrandDetection' => [
+                'name' => 'creditCardSilentModeBrandDetection',
+                'type' => 'select',
+                'value' => 0,
+                'label' => 'Kreditkarte - Silent Mode Kartentyp Autoerkennung ',
+                'required' => false,
+                'editable' => false,
+                'store' =>
+                    [
+                        [0, [
+                            'de_DE' => 'inaktiv',
+                            'en_GB' => 'disabled',
+                            'fr_FR' => 'désactivé',
+                        ]],
+                        [1, [
+                            'de_DE' => 'aktiv',
+                            'en_GB' => 'enabled',
+                            'fr_FR' => 'activé',
+                        ]],
+                    ],
+                'description' => 'Wählt anhand der eingebenen Kartennummer automatisch den Karten Typ und zeigt das Kartenlogo an.<BR>',
+            ],
         ];
 
     const formCreditCardNumberElements =
@@ -751,10 +773,14 @@ class CTPaymentConfigForms
                                   <b>Omnipay</b>: EMS payment solutions, Global Payments, Paysquare',
                 ],
                 'creditCardAccVerify' => [
-                    'label' => 'Kreditkarte - Kontoverifizierung anfordern ',
+                    'label' => 'Kreditkarte - Kontoverifizierung anfordern',
                     'description' => 'Indikator für Anforderung einer Kontoverifizierung (alias Nullwert-Authorisierung). <BR>
                                   Bei einer angeforderten Kontoverifizierung ist der übermittelte Betrag optional und <BR>
                                   wird für die tatsächliche Zahlungstransaktion ignoriert (z.B. Autorisierung).',
+                ],
+                'creditCardSilentModeBrandDetection' => [
+                    'label' => 'Kreditkarte - Silent Mode Kartentyp Autoerkennung',
+                    'description' => 'Wählt anhand der eingebenen Kartennummer automatisch den Karten Typ und zeigt das Kartenlogo an.<BR>',
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Kreditkarte - Template Name',
@@ -927,6 +953,10 @@ class CTPaymentConfigForms
                                   By using an account verification request the amount is optional and<BR>
                                   will be ignored for the real payment (E.g. authorization).',
                 ],
+                'creditCardSilentModeBrandDetection' => [
+                    'label' => 'Creditcard - Silent Mode card type autodetection',
+                    'description' => 'Chooses automatically the card type when entering the creditcard number and shows the creditcard logo.<BR>',
+                ],
                 'creditCardTemplate' => [
                     'label' => 'Creditcard - Template name',
                     'description' => 'Name of the XSLT-file with your individual payment form layout. If you want to use the responsive computop template for mobile devices, please use the template name „ct_responsive“.',
@@ -1097,6 +1127,10 @@ class CTPaymentConfigForms
                     'description' => 'Indicateur pour une requête de vérification de compte (alias Null-Auth).<BR>
                                   En utilisant une demande de vérification de compte, le montant est<BR>
                                   facultatif et sera ignoré pour le paiement réel (Exemple, autorisation).',
+                ],
+                'creditCardSilentModeBrandDetection' => [
+                    'label' => 'Creditcard - Silent Mode card type autodetection',
+                    'description' => 'Chooses automatically the card type when entering the creditcard number and shows the creditcard logo.<BR>',
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Carte de crédit - Nom du modèle',
