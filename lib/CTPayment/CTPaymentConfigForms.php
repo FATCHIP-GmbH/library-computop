@@ -1129,8 +1129,8 @@ class CTPaymentConfigForms
                                   facultatif et sera ignoré pour le paiement réel (Exemple, autorisation).',
                 ],
                 'creditCardSilentModeBrandDetection' => [
-                    'label' => 'Creditcard - Silent Mode card type autodetection',
-                    'description' => 'Chooses automatically the card type when entering the creditcard number and shows the creditcard logo.<BR>',
+                    'label' => 'Carte de crédit - Mode silencieux détection automatique du type de carte',
+                    'description' => 'Choisit automatiquement le type de carte lors de la saisie du numéro, et affiche le logo de la carte de crédit.<BR>',
                 ],
                 'creditCardTemplate' => [
                     'label' => 'Carte de crédit - Nom du modèle',
