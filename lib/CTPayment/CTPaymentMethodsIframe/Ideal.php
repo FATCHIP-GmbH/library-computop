@@ -142,7 +142,7 @@ class Ideal extends CTPaymentMethodIframe
         $query = join("&", $queryarray);
 
         $Len = strlen($query);  // Length of the plain text string
-        $data = $this->ctEncrypt($query, $Len, $this->getBlowfishPassword());
+        $data = $this->ctEncrypt($query, $Len, $this->getBlowfishPassword(), $this->encryption);
 
         return 'https://www.computop-paygate.com/idealIssuerList.aspx' .  '?merchantID=' . $this->getMerchantID() . '&Len=' . $Len . "&Data=" . $data;
     }

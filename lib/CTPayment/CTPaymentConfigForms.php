@@ -104,6 +104,31 @@ class CTPaymentConfigForms
                     ],
                 'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis.<BR>',
            ],
+            'encryption' => [
+                'name' => 'encryption',
+                'type' => 'select',
+                'value' => 'blowfish',
+                'label' => 'Verschlüsselung',
+                'required' => true,
+                'editable' => false,
+                'store' =>
+                    [
+                        ['blowfish', [
+                            'de_DE' => 'Blowfish Verschlüsselung (Standard)',
+                            'en_GB' => 'Blowfish encyption (default)',
+                            'fr_FR' => 'Blowfish chiffrement (défaut)',
+                        ]],
+                        ['aes', [
+                            'de_DE' => 'AES Verschlüsselung',
+                            'en_GB' => 'AES encyption',
+                            'fr_FR' => 'AES chiffrement',
+                        ]],
+                    ],
+                'description' => 'Art der verwendeten Verschlüsselung.<BR>
+                                  Blowfish Verschlüsselung wird vom Computop Support als Standard eingerichtet.<BR>
+                                  Sollte die Blowfish Verschlüsselung (bf-cbc) bei Ihrem Hoster nicht verfügbar sein, wenden Sie sich bitte an den Computop Support und lassen Sie AES aufschalten.<BR>
+                                  Wenn seitens Computop AES aktiviert wurde, stellen Sie auf AES um und führen den API Test durch.',
+            ],
         ];
 
     const formCreditCardSelectElements =
@@ -738,6 +763,13 @@ class CTPaymentConfigForms
                     'label' => 'Debug Protokoll',
                     'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis',
                 ],
+                'encryption' => [
+                    'label' => 'Verschlüsselung',
+                    'description' => 'Art der verwendeten Verschlüsselung.<BR>
+                                  Blowfish Verschlüsselung wird vom Computop Support als Standard eingerichtet.<BR>
+                                  Sollte die Blowfish Verschlüsselung (bf-cbc) bei Ihrem Hoster nicht verfügbar sein, wenden Sie sich bitte an den Computop Support und lassen Sie AES aufschalten.<BR>
+                                  Wenn seitens Computop AES aktiviert wurde, stellen Sie auf AES um und führen den API Test durch.',
+                ],
                 'creditCardMode' => [
                     'label' => 'Kreditkarte - Modus',
                     'description' => '<b>IFrame</b>: Kreditkartendaten werden nach klick auf "Zahlungsplichtig bestellen" in ein IFrame eingegeben<BR>
@@ -914,6 +946,12 @@ class CTPaymentConfigForms
                     'label' => 'Debug protocol',
                     'description' => 'Creates a log file <FatchipCTPayment_.log> with debugging output on the shopware log folder',
                 ],
+                'encryption' => [
+                    'label' => 'Encyption',
+                    'description' => 'Type of encryption used.<br>
+                                  Blowfish encryption is set up by Computop Support as a standard. If Blowfish encryption (bf-cbc) is not available from your hoster, please contact Computop Support and have AES activated.<BR>
+                                  If Computop has activated AES, switch to AES and run the API test.',
+                ],
                 'creditCardMode' => [
                     'label' => 'Creditcard - Mode',
                     'description' => '<b>IFrame</b>: The creditcard form will be displayed after clicking "confirm payment" in an iframe<BR>
@@ -1088,6 +1126,12 @@ class CTPaymentConfigForms
                 'debuglog' => [
                     'label' => 'Journalisation de déboggage',
                     'description' => 'Créer un journal <FatchipCTPayment_.log> avec les traces de déboggage dans le dossier de journaux de shopware',
+                ],
+                'encryption' => [
+                    'label' => 'Chiffrement',
+                    'description' => 'Type de chiffrement utilisé.<br>
+                                  Le chiffrement Blowfish est défini comme standard par le support Computop. Si le chiffrement Blowfish (bf-cbc) n\'est pas disponible chez votre hébergeur, veuillez contacter le support Computop and activer AES.<BR>
+                                  Si Computop a activé AES, basculez vers AES et executez le test de l\'API.',
                 ],
                 'creditCardMode' => [
                     'label' => 'Carte de crédit - Mode',

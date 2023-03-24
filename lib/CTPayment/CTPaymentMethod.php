@@ -32,7 +32,7 @@ use Exception;
 /**
  * Class CTPaymentMethod
  */
-abstract class CTPaymentMethod extends Blowfish
+abstract class CTPaymentMethod extends Encryption
 {
 
     const paymentClass = '';
@@ -46,6 +46,7 @@ abstract class CTPaymentMethod extends Blowfish
         'MAC' => 'MAC',
         'mac' => 'mac',
         'merchantID' => 'merchantID',
+        'encryption' => 'encryption',
     ];
 
     /**
@@ -66,6 +67,8 @@ abstract class CTPaymentMethod extends Blowfish
 
     protected $utils;
 
+    protected $encryption;
+
     public function __construct()
     {
         /** @noinspection PhpUndefinedMethodInspection */
@@ -74,6 +77,7 @@ abstract class CTPaymentMethod extends Blowfish
         $this->merchantID = $this->config['merchantID'];
         $this->blowfishPassword = $this->config['blowfishPassword'];
         $this->mac = $this->config['mac'];
+        $this->encryption = $this->config['encryption'];
 
         $this->utils = Shopware()->Container()->get('FatchipCTPaymentUtils');
     }
@@ -143,7 +147,7 @@ abstract class CTPaymentMethod extends Blowfish
 
         $request = join('&', $requestParams);
         $len = mb_strlen($request);  // Length of the plain text string
-        $data = $this->ctEncrypt($request, $len, $this->blowfishPassword);
+        $data = $this->ctEncrypt($request, $len, $this->blowfishPassword, $this->encryption);
 
         $url .=
             '?MerchantID=' . $this->merchantID .
@@ -174,7 +178,7 @@ abstract class CTPaymentMethod extends Blowfish
         $requestParams[] = "MAC=" . $this->ctHMAC($params);
         $request = join('&', $requestParams);
         $len = mb_strlen($request);  // Length of the plain text string
-        $data = $this->ctEncrypt($request, $len, $this->blowfishPassword);
+        $data = $this->ctEncrypt($request, $len, $this->blowfishPassword, $this->encryption);
 
         return ['MerchantID' => $this->merchantID , 'Len' => $len, 'Data' => $data];
     }

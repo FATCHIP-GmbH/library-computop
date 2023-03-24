@@ -34,7 +34,7 @@ use Fatchip\CTPayment\CTPaymentMethodsIframe\Sofort;
  * Class CTPaymentService
  * @package Fatchip\CTPayment
  */
-class CTPaymentService extends Blowfish
+class CTPaymentService extends Encryption
 {
     /**
      * CTPaymentService constructor
@@ -47,6 +47,7 @@ class CTPaymentService extends Blowfish
         $this->merchantID = $config['merchantID'];
         $this->blowfishPassword = $config['blowfishPassword'];
         $this->mac = $config['mac'];
+        $this->encryption = $config['encryption'];
     }
 
     /**

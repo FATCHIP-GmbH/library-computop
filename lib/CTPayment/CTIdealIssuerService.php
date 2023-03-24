@@ -34,7 +34,7 @@ use Exception;
  *  gets supported ideal financial institutes from the computop api
  *  as a fallback an array is returned
  */
-class CTIdealIssuerService extends Blowfish
+class CTIdealIssuerService extends Encryption
 {
 
     /**
@@ -49,6 +49,7 @@ class CTIdealIssuerService extends Blowfish
         $this->merchantID = $config['merchantID'];
         $this->blowfishPassword = $config['blowfishPassword'];
         $this->mac = $config['mac'];
+        $this->encryption = $config['encryption'];
     }
 
     /**
@@ -71,7 +72,7 @@ class CTIdealIssuerService extends Blowfish
         $query = join("&", $queryarray);
 
         $len = strlen($query);  // Length of the plain text string
-        $data = $this->ctEncrypt($query, $len, $this->blowfishPassword);
+        $data = $this->ctEncrypt($query, $len, $this->blowfishPassword, $this->encryption);
 
         return 'https://www.computop-paygate.com/idealIssuerList.aspx' .
             '?MerchantID=' . $this->merchantID .

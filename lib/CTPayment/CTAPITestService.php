@@ -35,7 +35,7 @@ use Fatchip\CTPayment\CTPaymentMethodsIframe\CreditCard;
  *  gets supported ideal financial institutes from the computop api
  *  as a fallback an array is returned
  */
-class CTAPITestService extends Blowfish
+class CTAPITestService extends Encryption
 {
 
     /**
@@ -50,6 +50,7 @@ class CTAPITestService extends Blowfish
         $this->merchantID = $config['merchantID'];
         $this->blowfishPassword = $config['blowfishPassword'];
         $this->mac = $config['mac'];
+        $this->encryption = $config['encryption'];
     }
 
     /**
@@ -69,7 +70,8 @@ class CTAPITestService extends Blowfish
         $reqId = (string)mt_rand();
         $reqId .= date('yzGis');
 
-        $testParams = array (
+        $testParams = [
+            'MerchantID' => $this->getMerchantID(),
             'capture' => 'MANUAL',
             'msgVer' => '2.0',
             'billingAddress' => 'eyJjaXR5IjoiQmVybGluIiwiY291bnRyeSI6eyJjb3VudHJ5QTMiOiJERVUifSwiYWRkcmVzc0xpbmUxIjp7InN0cmVldCI6IkhhdXB0c3RyLiIsInN0cmVldE51bWJlciI6IjMifSwicG9zdGFsQ29kZSI6IjEwNzc5In0=',
@@ -89,18 +91,40 @@ class CTAPITestService extends Blowfish
             'reqID' => $reqId,
             'sdZip' => '10779',
             'EtiId' => 'Shopware Test',
-        );
+        ];
+
+        // Parameters used to check AES encryption via
+        // https://computop.com/de/developer/paygate-test
+        /* $testParamsAESCheck = [
+            'MerchantID' => $this->getMerchantID(),
+            'TransID' => 'TID123',
+            'Amount' => 123,
+            'Currency' => 'EUR',
+            'URLNotify' => 'https://www.yourshop.org/notify.php',
+            'URLSuccess' => 'https://www.yourshop.org/success.php',
+            'URLFailure' => 'https://www.yourshop.org/failure.php',
+        ];
+        foreach ($testParamsAESCheck as $key => $value) {
+            $requestParams[] = "$key=" . $value;
+        }
+        $requestParams[] = "MAC=" . $this->ctHMAC($testParamsAESCheck);
+        */
+
 
         $requestParams = [];
         foreach ($testParams as $key => $value) {
-                $requestParams[] = "$key=" . $value;
+            $requestParams[] = "$key=" . $value;
         }
-
-        $requestParams[] = "MAC=" . $this->ctHMAC($requestParams);
+        $requestParams[] = "MAC=" . $this->ctHMAC($testParams);
 
         $request = join('&', $requestParams);
         $len = mb_strlen($request);  // Length of the plain text string
-        $data = $this->ctEncrypt($request, $len, $this->blowfishPassword);
+
+        // Test if encryption is supported
+        $plugin = Shopware()->Plugins()->Frontend()->FatchipCTPayment();
+        $plugin->checkOpenSSLSupport();
+
+        $data = $this->ctEncrypt($request, $len, $this->getBlowfishPassword(), $this->encryption);
 
         $url = 'https://www.computop-paygate.com/payssl.aspx';
         $url .=
