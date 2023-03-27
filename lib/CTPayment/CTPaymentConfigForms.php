@@ -53,7 +53,7 @@ class CTPaymentConfigForms
                 'name' => 'blowfishPassword',
                 'type' => 'text',
                 'value' => '',
-                'label' => 'Blowfish Password',
+                'label' => 'Passwort',
                 'required' => true,
                 'description' => 'Ihr Verschlüsselungs-Passwort',
             ],
@@ -742,7 +742,7 @@ class CTPaymentConfigForms
                     'description' => 'Ihr HMAC-Key',
                 ],
                 'blowfishPassword' => [
-                    'label' => 'Blowfish Password',
+                    'label' => 'Passwort',
                     'description' => 'Ihr Verschlüsselungs-Passwort',
                 ],
                 'fatchip_computop_apitest_button' => [
@@ -925,8 +925,8 @@ class CTPaymentConfigForms
                     'description' => 'Your HMAC-Key',
                 ],
                 'blowfishPassword' => [
-                    'label' => 'Blowfish Password',
-                    'description' => 'Your blowfish password',
+                    'label' => 'Password',
+                    'description' => 'Your encryption password',
                 ],
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>test API credentials (Save and clear cache first)<strong>',
@@ -1107,7 +1107,7 @@ class CTPaymentConfigForms
                 ],
                 'blowfishPassword' => [
                     'label' => 'Mot de passe Blowfish',
-                    'description' => 'Votre mot de passe Blowfish',
+                    'description' => 'Votre mot de passe de cryptage',
                 ],
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>Tester les données d`accès API (Enregistrer d`abord et vider le cache)<strong>',
