@@ -49,8 +49,6 @@ class Ideal extends CTPaymentMethodIframe
 
     protected $idealDirekt;
 
-    protected $Custom;
-
     /**
      * Ideal constructor
      * @param array $config
@@ -75,7 +73,6 @@ class Ideal extends CTPaymentMethodIframe
         $this->setUrlSuccess($urlSuccess);
         $this->setUrlFailure($urlFailure);
         $this->setUrlNotify($urlNotify);
-        $this->setCustom();
     }
 
     /**
@@ -148,21 +145,6 @@ class Ideal extends CTPaymentMethodIframe
         $data = $this->ctEncrypt($query, $Len, $this->getBlowfishPassword(), $this->encryption);
 
         return 'https://www.computop-paygate.com/idealIssuerList.aspx' .  '?merchantID=' . $this->getMerchantID() . '&Len=' . $Len . "&Data=" . $data;
-    }
-
-    /**
-     * Send the user sessionid in the custom field
-     * CT returns the custom parameter unencrypted in the reuqests response.
-     * This is only used for restoring the session after iframe payments as a workaround for Safari 6+ browsers
-     */
-    public function setCustom()
-    {
-        $module = Shopware()->Container()->get('front')->Request()->getModuleName();
-        if ($module !== 'backend') {
-            $this->Custom = 'session=' . Shopware()->Session()->get('sessionId');
-        } else {
-            $this->Custom = '';
-        }
     }
 
 }
