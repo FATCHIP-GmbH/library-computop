@@ -91,6 +91,9 @@ class CTPaymentAttributes
         'kreditkartecardholdername' => [
             'type' => 'VARCHAR(255)',
         ],
+        'sessionId' => [
+            'type' => 'VARCHAR(255)',
+        ],
     ];
 
     /**
