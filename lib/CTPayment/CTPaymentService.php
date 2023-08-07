@@ -64,7 +64,7 @@ class CTPaymentService extends Encryption
      * @param null $klarnainvoice
      * @return CTPaymentMethodIframe
      */
-    public function getIframePaymentClass($className, $config, $ctOrder = null, $urlSuccess = null, $urlFailure = null, $urlNotify = null, $orderDesc = null, $userData = null, $eventToken = null, $isFirm = null, $klarnainvoice = null)
+    public function getIframePaymentClass($className, $config, $ctOrder = null, $urlSuccess = null, $urlFailure = null, $urlNotify = null, $orderDesc = null, $userData = null, $eventToken = null, $isFirm = null, $klarnainvoice = null, $urlBack = null)
     {
         //Lastschrift is an abstract class and cannot be instantiated directly
         if ($className == 'Lastschrift') {
@@ -78,7 +78,7 @@ class CTPaymentService extends Encryption
         }
 
         $class = 'Fatchip\\CTPayment\\CTPaymentMethodsIframe\\' . $className;
-        return new $class($config, $ctOrder, $urlSuccess, $urlFailure, $urlNotify, $orderDesc, $userData, $eventToken, $isFirm, $klarnainvoice);
+        return new $class($config, $ctOrder, $urlSuccess, $urlFailure, $urlNotify, $orderDesc, $userData, $eventToken, $isFirm, $klarnainvoice, $urlBack);
     }
 
     /**

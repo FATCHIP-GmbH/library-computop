@@ -260,6 +260,10 @@ class CreditCard extends CTPaymentMethodIframe
      * @param $urlNotify
      * @param $orderDesc
      * @param $userData
+     * @param $eventToken
+     * @param $isFirm
+     * @param null $klarnainvoice
+     * @param null $urlBack
      */
     public function __construct(
         $config,
@@ -268,7 +272,11 @@ class CreditCard extends CTPaymentMethodIframe
         $urlFailure,
         $urlNotify,
         $orderDesc,
-        $userData
+        $userData,
+        $eventToken = null,
+        $isFirm = null,
+        $klarnainvoice = null,
+        $urlBack
     )
     {
         parent::__construct($config, $order, $orderDesc, $userData);
@@ -276,6 +284,7 @@ class CreditCard extends CTPaymentMethodIframe
         $this->setUrlSuccess($urlSuccess);
         $this->setUrlFailure($urlFailure);
         $this->setUrlNotify($urlNotify);
+        $this->setUrlBack($urlBack);
 
         $this->setMsgVer('2.0');
         $this->setUserData(base64_encode($userData));
