@@ -1,4 +1,15 @@
 {
+  "name": "fatchip-gmbh/library-computop",
+  "description": "Computop PHP LibraRY",
+  "license": [
+    "proprietary"
+  ],
+  "authors": [
+    {
+      "name": "fATCHIP GmbH"
+    }
+  ],
+  "homepage": "https://www.fatchip.de",
   "require": {
     "viison/address-splitter": "^0.3.1",
     "theiconic/name-parser": "^1.2"
