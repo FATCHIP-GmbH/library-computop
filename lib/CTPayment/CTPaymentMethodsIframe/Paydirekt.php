@@ -380,7 +380,7 @@ class Paydirekt extends CTPaymentMethodIframe
      */
     public function getCTPaymentURL()
     {
-        return 'https://www.computop-paygate.com/paydirekt.aspx';
+        return 'https://www.computop-paygate.com/giropay.aspx';
     }
 
     /**
