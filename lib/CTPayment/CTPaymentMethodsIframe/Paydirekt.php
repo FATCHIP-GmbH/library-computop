@@ -147,11 +147,13 @@ class Paydirekt extends CTPaymentMethodIframe
         $this->setUrlFailure($urlFailure);
         $this->setUrlNotify($urlNotify);
 
+        /*
         if (empty($config['payDirektShopApiKey'])) {
             throw new RuntimeException('Paydirekt ShopApiKey is not set in Plugin Config');
         }
 
         $this->setShopApiKey($config['payDirektShopApiKey']);
+        */
 
         $this->setShippingAddress($order->getShippingAddress());
 
