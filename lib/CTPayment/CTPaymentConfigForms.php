@@ -437,50 +437,7 @@ class CTPaymentConfigForms
         [
         ];
 
-    const formPayDirektTextElements =
-        [
-            'payDirektShopApiKey' => [
-                'name' => 'payDirektShopApiKey',
-                'type' => 'text',
-                'value' => '',
-                'label' => 'Paydirekt - Shop Api Key',
-                'required' => false,
-                'description' => 'Ihr Paydirekt Api Schlüssel',
-            ],
-        ];
-
-    const formPayDirektSelectElements =
-        [
-            'payDirektCaption' => [
-                'name' => 'payDirektCaption',
-                'type' => 'select',
-                'value' => 'AUTO',
-                'label' => 'Paydirekt - Capture Modus',
-                'required' => false,
-                'editable' => false,
-                'store' =>
-                    [
-                        ['AUTO', [
-                            'de_DE' => 'Automatisch',
-                            'en_GB' => 'automatic',
-                            'fr_FR' => 'automatique',
-                        ]],
-                        ['MANUAL', [
-                            'de_DE' => 'Manuell',
-                            'en_GB' => 'manual',
-                            'fr_FR' => 'manuel',
-                        ]],
-                    ],
-                'description' => '<b>AUTO</b>: Reservierte Beträge werden sofort automatisch eingezogen.<BR>
-                                  <b>MANUAL</b>: Geldeinzüge werden von Ihnen manuell im Shopbackend durchgeführt.',
-            ],
-        ];
-
-    const formPayDirektNumberElements =
-        [
-        ];
-
-    const formPayPalSelectElements =
+    public const formPayPalSelectElements =
         [
             'paypalCaption' => [
                 'name' => 'paypalCaption',
@@ -835,15 +792,6 @@ class CTPaymentConfigForms
                     'label' => 'Iban anonymisieren',
                     'description' => 'Stellt im Checkout und im Mein Konto Bereich die Iban anonymisiert dar',
                 ],
-                'payDirektShopApiKey' => [
-                    'label' => 'Paydirekt - Shop Api Key',
-                    'description' => 'Ihr Paydirekt Api Schlüssel',
-                ],
-                'payDirektCaption' => [
-                    'label' => 'Paydirekt - Capture Modus',
-                    'description' => '<b>AUTO</b>: Reservierte Beträge werden sofort automatisch eingezogen.<BR>
-                                  <b>MANUAL</b>: Geldeinzüge werden von Ihnen manuell im Shopbackend durchgeführt.',
-                ],
                 'paypalCaption' => [
                     'label' => 'Paypal - Capture Modus',
                     'description' => 'bestimmt, ob der angefragte Betrag sofort oder erst später eingezogen wird. <br>
@@ -1015,15 +963,6 @@ class CTPaymentConfigForms
                 'lastschriftAnon' => [
                     'label' => 'Anonymize IBAN',
                     'description' => 'The customers IBAN will be displayed anonymized in checkout and on the my accoutn page',
-                ],
-                'payDirektShopApiKey' => [
-                    'label' => 'Paydirekt - Shop Api Key',
-                    'description' => 'Your Paydirekt Api Key',
-                ],
-                'payDirektCaption' => [
-                    'label' => 'Paydirekt - Capture Modus',
-                    'description' => '<b>AUTO</b>: Reserved amounts will be captured automatically.<BR>
-                                  <b>MANUAL</b>: Reserverd amounts have to be captured manuelly in the shop backend.',
                 ],
                 'paypalCaption' => [
                     'label' => 'Paypal - Capture Modus',
@@ -1197,15 +1136,6 @@ class CTPaymentConfigForms
                 'lastschriftAnon' => [
                     'label' => 'Anonymiser l\'IBAN',
                     'description' => 'L\'IBAN du client sera affiché de manière anonyme durant la transaction et sur la page \'Mon compte\'.',
-                ],
-                'payDirektShopApiKey' => [
-                    'label' => 'Paydirekt - Clé API',
-                    'description' => 'Votre clé API Paydirekt',
-                ],
-                'payDirektCaption' => [
-                    'label' => 'Paydirekt - Mode de débit',
-                    'description' => '<b>AUTO</b>: Les montants réservés seront débités automatiquement.<BR>
-                                  <b>MANUEL</b>: Les montants réservés doivent être débités manuellement via l\'administration de la boutique.',
                 ],
                 'paypalCaption' => [
                     'label' => 'Paypal - Mode de débit',

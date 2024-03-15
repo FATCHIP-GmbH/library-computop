@@ -91,9 +91,9 @@ class CTPaymentMethods
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
             [
-                'name' => 'fatchip_computop_paydirekt',
+                'name' => 'fatchip_computop_giropay',
                 'shortname' => 'Paydirekt',
-                'description' => 'Computop Paydirekt',
+                'description' => 'Computop Giropay',
                 'action' => 'FatchipCTPaydirekt',
                 'template' => '',
                 'additionalDescription' => '',
