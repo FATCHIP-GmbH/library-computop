@@ -437,7 +437,7 @@ class CTPaymentConfigForms
         [
         ];
 
-    public const formPayPalSelectElements =
+    const formPayPalSelectElements =
         [
             'paypalCaption' => [
                 'name' => 'paypalCaption',
