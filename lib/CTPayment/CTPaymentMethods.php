@@ -92,7 +92,7 @@ class CTPaymentMethods
             ],
             [
                 'name' => 'fatchip_computop_giropay',
-                'shortname' => 'Paydirekt',
+                'shortname' => 'Giropay',
                 'description' => 'Computop Giropay',
                 'action' => 'FatchipCTPaydirekt',
                 'template' => '',
