@@ -224,8 +224,8 @@ trait KlarnaPayments
                 $articleList['order_lines'][] = [
                     'name' => $item['articlename'],
                     'quantity' => $quantity,
-                    'unit_price' => (int) round($item['priceNumeric'] * 100),
-                    'total_amount' => (int) round($totalAmount),
+                    'unit_price' => round($item['priceNumeric'] * 100),
+                    'total_amount' => $totalAmount,
                     'tax_rate' => $item['tax_rate'] * 100,
                     'total_tax_amount' => $itemTaxAmount,
                 ];
@@ -240,8 +240,8 @@ trait KlarnaPayments
             $articleList['order_lines'][] = [
                 'name' => 'shippingcosts',
                 'quantity' => 1,
-                'unit_price' => (int) round($shippingCosts * 100),
-                'total_amount' => (int) round($shippingCosts * 100),
+                'unit_price' => $shippingCosts * 100,
+                'total_amount' => $shippingCosts * 100,
                 'tax_rate' => 0,
                 'total_tax_amount' => 0,
             ];
