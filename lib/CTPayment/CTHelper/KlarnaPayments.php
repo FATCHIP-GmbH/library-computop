@@ -45,7 +45,7 @@ trait KlarnaPayments
         $session = Shopware()->Session();
 
         $sessionAmount = $session->get('FatchipCTKlarnaPaymentAmount', '');
-        $currentAmount = $ctOrder->getAmount();
+        $currentAmount = (int) $ctOrder->getAmount();
         $amountChanged = $currentAmount !== $sessionAmount;
 
         $sessionArticleListBase64 = $session->get('FatchipCTKlarnaPaymentArticleListBase64', '');
@@ -120,7 +120,7 @@ trait KlarnaPayments
             $payType,
             $klarnaAccount,
             $userData['additional']['country']['countryiso'],
-            $ctOrder->getAmount(),
+            (int) $ctOrder->getAmount(),
             $ctOrder->getCurrency(),
             \Fatchip\CTPayment\CTPaymentMethods\KlarnaPayments::generateTransID(),
             Util::getRemoteAddress());
@@ -214,42 +214,107 @@ trait KlarnaPayments
      */
     public function createArticleListBase64()
     {
-        $articleList = [];
+        $articleListArray = [];
+        $userData = $this->getUserData(); // new
+        $chargeVat = $userData['additional']['charge_vat'];
 
         try {
             foreach (Shopware()->Modules()->Basket()->sGetBasket()['content'] as $item) {
                 $quantity = (int)$item['quantity'];
-                $itemTaxAmount = round(str_replace(',', '.', $item['tax']) * 100);
-                $totalAmount = round(str_replace(',', '.', $item['price']) * 100) * $quantity;
-                $articleList['order_lines'][] = [
+                $itemTaxAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['tax']) * 100) : 0;
+                $totalAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['amountNumeric']) * 100) :  (int) ($item['amountnetNumeric'] * 100);
+                $articleListArray['order_lines'][] = [
                     'name' => $item['articlename'],
                     'quantity' => $quantity,
-                    'unit_price' => round($item['priceNumeric'] * 100),
-                    'total_amount' => $totalAmount,
-                    'tax_rate' => $item['tax_rate'] * 100,
-                    'total_tax_amount' => $itemTaxAmount,
+                    'unit_price' => $chargeVat ? (int) round(($item['priceNumeric'] * 100)) : (int) ($item['netprice'] * 100),
+                    'total_amount' => (int) $totalAmount,
+                    'tax_rate' => $chargeVat ? (int) ($item['tax_rate'] * 100) : 0,
+                    'total_tax_amount' => (int) $itemTaxAmount,
                 ];
             }
         } catch (Exception $e) {
             return '';
         }
 
-        $shippingCosts = $this->utils->calculateShippingCosts();
+        $shippingCosts = Shopware()->Modules()->Admin()->sGetPremiumShippingcosts();
 
-        if ($shippingCosts) {
-            $articleList['order_lines'][] = [
+        if ($shippingCosts >= 0) {
+            $articleListArray['order_lines'][] = [
                 'name' => 'shippingcosts',
                 'quantity' => 1,
-                'unit_price' => $shippingCosts * 100,
-                'total_amount' => $shippingCosts * 100,
-                'tax_rate' => 0,
-                'total_tax_amount' => 0,
+                'unit_price' => $chargeVat ? (int) ($shippingCosts['brutto'] * 100) : (int) ($shippingCosts['netto'] * 100) ,
+                'total_amount' => $chargeVat ? (int) ($shippingCosts['brutto'] * 100) : (int) ($shippingCosts['netto'] * 100) ,
+                'tax_rate' => $chargeVat ? (int) ($shippingCosts['tax'] * 100) : 0,
+                'total_tax_amount' => $chargeVat ? (int) (($shippingCosts['brutto'] - $shippingCosts['netto']) * 100) : 0 ,
             ];
         }
 
         /** @var string $articleList */
-        $articleList = base64_encode(json_encode($articleList));
+        $articleList = base64_encode(json_encode($articleListArray));
 
         return $articleList;
+    }
+
+    /**
+     * @return array
+     * @deprecated in 5.6, will be protected in 5.8
+     *
+     * Get complete user-data as an array to use in view
+     *
+     */
+    public function getUserData()
+    {
+        $system = Shopware()->System();
+        $userData = Shopware()->Modules()->Admin()->sGetUserData();
+        if (!empty($userData['additional']['countryShipping'])) {
+            $system->sUSERGROUPDATA = Shopware()->Db()->fetchRow('
+                SELECT * FROM s_core_customergroups
+                WHERE groupkey = ?
+            ', [$system->sUSERGROUP]);
+
+            $taxFree = $this->isTaxFreeDelivery($userData);
+
+            if ($taxFree) {
+                $system->sUSERGROUPDATA['tax'] = 0;
+                $system->sCONFIG['sARTICLESOUTPUTNETTO'] = 1; // Old template
+                Shopware()->Session()->set('sUserGroupData', $system->sUSERGROUPDATA);
+                $userData['additional']['charge_vat'] = false;
+                $userData['additional']['show_net'] = false;
+                Shopware()->Session()->set('sOutputNet', true);
+            } else {
+                $userData['additional']['charge_vat'] = true;
+                $userData['additional']['show_net'] = !empty($system->sUSERGROUPDATA['tax']);
+                Shopware()->Session()->set('sOutputNet', empty($system->sUSERGROUPDATA['tax']));
+            }
+        }
+
+        return $userData;
+    }
+
+    /**
+     * Validates if the provided customer should get a tax free delivery
+     *
+     * @param array $userData
+     *
+     * @return bool
+     */
+    protected function isTaxFreeDelivery($userData)
+    {
+        if (!empty($userData['additional']['countryShipping']['taxfree'])) {
+            return true;
+        }
+
+        if (empty($userData['additional']['countryShipping']['taxfree_ustid'])) {
+            return false;
+        }
+
+        // new
+        if (empty($userData['shippingaddress']['ustid'])
+            && !empty($userData['billingaddress']['ustid'])
+            && !empty($userData['additional']['country']['taxfree_ustid'])) {
+            return true;
+        }
+
+        return !empty($userData['shippingaddress']['ustid']);
     }
 }
