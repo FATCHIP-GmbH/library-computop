@@ -222,11 +222,17 @@ trait KlarnaPayments
             foreach (Shopware()->Modules()->Basket()->sGetBasket()['content'] as $item) {
                 $quantity = (int)$item['quantity'];
                 $itemTaxAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['tax']) * 100) : 0;
-                $totalAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['amountNumeric']) * 100) :  (int) ($item['amountnetNumeric'] * 100);
+                if (!empty($item['amountWithTax'])) {
+                    $totalAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['amountWithTax']) * 100) :  (int) ($item['amountnetNumeric'] * 100);
+                    $unit_price = $chargeVat ? (int) round(($item['amountWithTax'] * 100 / $quantity)) : (int) ($item['netprice'] * 100);
+                } else {
+                    $totalAmount = $chargeVat ? (int) round(str_replace(',', '.', $item['amountNumeric']) * 100) :  (int) ($item['amountnetNumeric'] * 100);
+                    $unit_price = $chargeVat ? (int) round(($item['priceNumeric'] * 100)) : (int) ($item['netprice'] * 100);
+                }
                 $articleListArray['order_lines'][] = [
                     'name' => $item['articlename'],
                     'quantity' => $quantity,
-                    'unit_price' => $chargeVat ? (int) round(($item['priceNumeric'] * 100)) : (int) ($item['netprice'] * 100),
+                    'unit_price' => $unit_price,
                     'total_amount' => (int) $totalAmount,
                     'tax_rate' => $chargeVat ? (int) ($item['tax_rate'] * 100) : 0,
                     'total_tax_amount' => (int) $itemTaxAmount,
