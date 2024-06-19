@@ -63,7 +63,7 @@ class CTPaymentConfigForms
                 'value' => '',
                 'label' => 'Bestellnummer Präfix',
                 'required' => false,
-                'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen',
+                'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
             ],
             'suffixOrdernumber' => [
                 'name' => 'suffixOrdernumber',
@@ -71,7 +71,7 @@ class CTPaymentConfigForms
                 'value' => '',
                 'label' => 'Bestellnummer Suffix',
                 'required' => false,
-                'description' => 'Suffix für Bestellnummern.Maximal 4 Zeichen',
+                'description' => 'Suffix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
             ],
         ];
 
@@ -710,11 +710,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Bestellnummer Präfix',
-                    'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen',
+                    'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Bestellnummer Suffix',
-                    'description' => 'Suffix für Bestellnummern. Maximal 4 Zeichen',
+                    'description' => 'Suffix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
                 ],
                 'debuglog' => [
                     'label' => 'Debug Protokoll',
@@ -884,11 +884,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Ordernumber prefix',
-                    'description' => 'Prefix for ordernumbers.Maximum 4 characters',
+                    'description' => 'Prefix for ordernumbers. Maximum 4 characters.<br>Characters more than 4 will be cut down when transferring to Computop.<br>No Placeholders allowed anymore.',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Ordernumber suffix',
-                    'description' => 'Suffix for ordernumbers.Maximum 4 characters',
+                    'description' => 'Suffix for ordernumbers. Maximum 4 characters.<br>Characters more than 4 will be cut down when transferring to Computop.<br>No Placeholders allowed anymore.',
                 ],
                 'debuglog' => [
                     'label' => 'Debug protocol',
@@ -1056,11 +1056,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Préfixe de numéro de commande',
-                    'description' => 'Préfixe pour les numéros de commande.4 caractères maximum',
+                    'description' => 'Préfixe pour le numéro de commande. 4 caractères maximum.<br>Les caractères supplémentaires seront tronqués à l\'envoi vers Computop.<br>Les caractères génériques ne sont plus autorisés.',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Suffixe de numéro de commande',
-                    'description' => 'Suffixe pour les numéros de commande.4 caractères maximum',
+                    'description' => 'Suffixe pour le numéro de commande. 4 caractères maximum.<br>Les caractères supplémentaires seront tronqués à l\'envoi vers Computop.<br>Les caractères génériques ne sont plus autorisés.',
                 ],
                 'debuglog' => [
                     'label' => 'Journalisation de déboggage',
