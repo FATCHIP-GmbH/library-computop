@@ -566,7 +566,7 @@ abstract class CTPaymentMethodIframe extends CTPaymentMethod
      * @deprecated
      * use Utils->generateTransID()
      */
-    public static function generateTransID($digitCount = 15) {
+    public static function generateTransID($digitCount = 11) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $characters_length = strlen($characters);
         $transID = '';
