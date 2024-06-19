@@ -120,7 +120,7 @@ class CTPaymentMethods
                 'className' => 'PaypalExpress',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
-            [
+/*            [
                 'name' => 'fatchip_computop_postfinance',
                 'shortname' => 'Postfinance',
                 'description' => 'Computop Postfinance',
@@ -130,6 +130,7 @@ class CTPaymentMethods
                 'className' => 'PostFinance',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],
             ],
+*/
             [
                 'name' => 'fatchip_computop_przelewy24',
                 'shortname' => 'Przelewy24',
