@@ -28,6 +28,7 @@ namespace Fatchip\CTPayment\CTHelper;
 
 use Exception;
 use Fatchip\CTPayment\CTOrder\CTOrder;
+use Fatchip\CTPayment\CTPaymentMethodIframe;
 use Shopware\Plugins\FatchipCTPayment\Util;
 
 
@@ -122,7 +123,7 @@ trait KlarnaPayments
             $userData['additional']['country']['countryiso'],
             (int) $ctOrder->getAmount(),
             $ctOrder->getCurrency(),
-            \Fatchip\CTPayment\CTPaymentMethods\KlarnaPayments::generateTransID(),
+            CTPaymentMethodIframe::generateTransID(),
             Util::getRemoteAddress());
 
         return $params;
@@ -181,30 +182,6 @@ trait KlarnaPayments
         $address = md5(serialize($userData['billingaddress']) . serialize($userData['shippingaddress']));
 
         return $address;
-    }
-
-    /**
-     * @param int $digitCount Optional parameter for the length of resulting
-     *                        transID. The default value is 12.
-     *
-     * @return string The transID with a length of $digitCount.
-     */
-    public static function generateTransID($digitCount = 12)
-    {
-        mt_srand((double)microtime() * 1000000);
-
-        $transID = (string)mt_rand();
-        // y: 2 digits for year
-        // m: 2 digits for month
-        // d: 2 digits for day of month
-        // H: 2 digits for hour
-        // i: 2 digits for minute
-        // s: 2 digits for second
-        $transID .= date('ymdHis');
-        // $transID = md5($transID);
-        $transID = substr($transID, 0, $digitCount);
-
-        return $transID;
     }
 
     /**

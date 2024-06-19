@@ -63,7 +63,7 @@ class CTPaymentConfigForms
                 'value' => '',
                 'label' => 'Bestellnummer Präfix',
                 'required' => false,
-                'description' => 'Präfix für Bestellnummern. Sie können folgende Platzhalter verwenden: %transid% , %payid%, %xid%',
+                'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen',
             ],
             'suffixOrdernumber' => [
                 'name' => 'suffixOrdernumber',
@@ -71,7 +71,7 @@ class CTPaymentConfigForms
                 'value' => '',
                 'label' => 'Bestellnummer Suffix',
                 'required' => false,
-                'description' => 'Suffix für Bestellnummern. Sie können folgende Platzhalter verwenden: %transid% , %payid%, %xid%',
+                'description' => 'Suffix für Bestellnummern.Maximal 4 Zeichen',
             ],
         ];
 
@@ -710,11 +710,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Bestellnummer Präfix',
-                    'description' => 'Präfix für Bestellnummern. Sie können folgende Platzhalter verwenden: %transid% , %payid%, %xid%',
+                    'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Bestellnummer Suffix',
-                    'description' => 'Suffix für Bestellnummern. Sie können folgende Platzhalter verwenden: %transid% , %payid%, %xid%',
+                    'description' => 'Suffix für Bestellnummern. Maximal 4 Zeichen',
                 ],
                 'debuglog' => [
                     'label' => 'Debug Protokoll',
@@ -884,11 +884,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Ordernumber prefix',
-                    'description' => 'Prefix for ordernumbers. You can use the following placeholders: %transid% , %payid%, %xid%',
+                    'description' => 'Prefix for ordernumbers.Maximum 4 characters',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Ordernumber suffix',
-                    'description' => 'Suffix for ordernumbers. You can use the following placeholders: %transid% , %payid%, %xid%',
+                    'description' => 'Suffix for ordernumbers.Maximum 4 characters',
                 ],
                 'debuglog' => [
                     'label' => 'Debug protocol',
@@ -1056,11 +1056,11 @@ class CTPaymentConfigForms
                 ],
                 'prefixOrdernumber' => [
                     'label' => 'Préfixe de numéro de commande',
-                    'description' => 'Préfixe pour les numéros de commande. Vous pouvez utiliser les paramètres fictifs suivants: %transid% , %payid%, %xid%',
+                    'description' => 'Préfixe pour les numéros de commande.4 caractères maximum',
                 ],
                 'suffixOrdernumber' => [
                     'label' => 'Suffixe de numéro de commande',
-                    'description' => 'Suffixe pour les numéros de commande. Vous pouvez utiliser les paramètres fictifs suivants: %transid% , %payid%, %xid%',
+                    'description' => 'Suffixe pour les numéros de commande.4 caractères maximum',
                 ],
                 'debuglog' => [
                     'label' => 'Journalisation de déboggage',
