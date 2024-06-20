@@ -175,6 +175,8 @@ class EasyCredit extends CTPaymentMethodIframe
      */
     protected $MobileNr;
 
+    protected $version;
+
     /**
      * @ignore <description>
      * @param string $email
@@ -519,6 +521,25 @@ class EasyCredit extends CTPaymentMethodIframe
         return $this->sdStreetNr;
     }
 
+    /**
+     * @ignore <description>
+     * @param int $version
+     */
+    public function setVersion($version)
+    {
+        $this->version = $version;
+    }
+
+    /**
+     * @ignore <description>
+     * @return int
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+
 
     /**
      * EasyCredit constructor
@@ -559,6 +580,7 @@ class EasyCredit extends CTPaymentMethodIframe
             $this->setSalutation($order->getBillingAddress()->getSalutation());
         }
         $this->setEventToken($eventToken);
+        $this->setVersion(3);
     }
 
 
@@ -629,6 +651,7 @@ class EasyCredit extends CTPaymentMethodIframe
             'amount' => $amount,
             'currency' => $currency,
             'EventToken' => 'GET',
+            'version' => 3,
         ];
         return $params;
     }
