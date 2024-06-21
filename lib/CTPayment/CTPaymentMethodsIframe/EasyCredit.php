@@ -580,7 +580,7 @@ class EasyCredit extends CTPaymentMethodIframe
             $this->setSalutation($order->getBillingAddress()->getSalutation());
         }
         $this->setEventToken($eventToken);
-        $this->setVersion(3);
+        $this->setVersion('v3');
     }
 
 
