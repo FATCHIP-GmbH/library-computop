@@ -68,6 +68,20 @@ class EasyCredit extends CTPaymentMethodIframe
     protected $LastName;
 
     /**
+     * Vorname
+     *
+     * @var string
+     */
+    protected $bdFirstName;
+
+    /**
+     * Nachname
+     *
+     * @var string
+     */
+    protected $bdLastName;
+
+    /**
      * Geburtsdatum im Format YYYY-MM-DD
      *
      * @var string
@@ -125,6 +139,20 @@ class EasyCredit extends CTPaymentMethodIframe
      * @var string
      */
     protected $PackingStation;
+
+    /**
+     * Vorname
+     *
+     * @var string
+     */
+    protected $sdFirstName;
+
+    /**
+     * Nachname
+     *
+     * @var string
+     */
+    protected $sdLastName;
 
     /**
      * Straße
@@ -214,6 +242,37 @@ class EasyCredit extends CTPaymentMethodIframe
     }
 
     /**
+     * @ignore <description>
+     * @param string $lastName
+     */
+    public function setFirstName($firstName)
+    {
+        $this->FirstName = $firstName;
+    }
+    public function getFirstName()
+    {
+        return $this->FirstName;
+    }
+
+    /**
+     * @ignore <description>
+     * @param string $lastName
+     */
+    public function setLastName($lastName)
+    {
+        $this->LastName = $lastName;
+    }
+
+    /**
+     * @ignore <description>
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->LastName;
+    }
+
+    /**
      * Geburtsdatum im Format YYYY-MM-DD
      *
      * @param string $dateOfBirth
@@ -236,36 +295,36 @@ class EasyCredit extends CTPaymentMethodIframe
      * @ignore <description>
      * @param string $firstName
      */
-    public function setFirstName($firstName)
+    public function setBdFirstName($firstName)
     {
-        $this->FirstName = $firstName;
+        $this->bdFirstName = $firstName;
     }
 
     /**
      * @ignore <description>
      * @return string
      */
-    public function getFirstName()
+    public function getBdFirstName()
     {
-        return $this->FirstName;
+        return $this->bdFirstName;
     }
 
     /**
      * @ignore <description>
      * @param string $lastName
      */
-    public function setLastName($lastName)
+    public function setBdLastName($lastName)
     {
-        $this->LastName = $lastName;
+        $this->bdLastName = $lastName;
     }
 
     /**
      * @ignore <description>
      * @return string
      */
-    public function getLastName()
+    public function getBdLastName()
     {
-        return $this->LastName;
+        return $this->bdLastName;
     }
 
     /**
@@ -339,6 +398,42 @@ class EasyCredit extends CTPaymentMethodIframe
     public function getBdAddressAddition()
     {
         return $this->bdAddressAddition;
+    }
+
+    /**
+     * @ignore <description>
+     * @param string $firstName
+     */
+    public function setSdFirstName($firstName)
+    {
+        $this->sdFirstName = $firstName;
+    }
+
+    /**
+     * @ignore <description>
+     * @return string
+     */
+    public function getSdFirstName()
+    {
+        return $this->sdFirstName;
+    }
+
+    /**
+     * @ignore <description>
+     * @param string $lastName
+     */
+    public function setSdLastName($lastName)
+    {
+        $this->sdLastName = $lastName;
+    }
+
+    /**
+     * @ignore <description>
+     * @return string
+     */
+    public function getSdLastName()
+    {
+        return $this->sdLastName;
     }
 
     /**
@@ -577,7 +672,8 @@ class EasyCredit extends CTPaymentMethodIframe
         if ($order->getBillingAddress()) {
             $this->setFirstName($order->getBillingAddress()->getFirstName());
             $this->setLastName($order->getBillingAddress()->getLastName());
-            $this->setSalutation($order->getBillingAddress()->getSalutation());
+            $Salutation = $order->getBillingAddress()->getSalutation() == 'Herr' ? 'Mr' : 'Mrs';
+            $this->setSalutation($Salutation);
         }
         $this->setEventToken($eventToken);
         $this->setVersion('v3');
@@ -591,6 +687,10 @@ class EasyCredit extends CTPaymentMethodIframe
     public function setShippingAddress($shippingAddress)
     {
         if (isset($shippingAddress)) {
+            $Salutation = $shippingAddress->getSalutation() == 'Herr' ? 'Mr' : 'Mrs';
+            $this->setSalutation($Salutation);
+            $this->setSdFirstName($shippingAddress->getFirstName());
+            $this->setSdLastName($shippingAddress->getLastName());
             $this->setSdStreet($shippingAddress->getStreet());
             $this->setSdStreetNr($shippingAddress->getStreetNr());
             $this->setSdZip($shippingAddress->getZip());
@@ -606,6 +706,10 @@ class EasyCredit extends CTPaymentMethodIframe
     public function setBillingAddress($billingAddress)
     {
         if (isset($billingAddress)) {
+            $Salutation = $billingAddress->getSalutation() == 'Herr' ? 'Mr' : 'Mrs';
+            $this->setBdFirstName($billingAddress->getFirstName());
+            $this->setBdLastName($billingAddress->getLastName());
+            $this->setSalutation($Salutation);
             $this->setBdStreet($billingAddress->getStreet());
             $this->setBdStreetNr($billingAddress->getStreetNr());
             $this->setBdZip($billingAddress->getZip());
@@ -651,7 +755,7 @@ class EasyCredit extends CTPaymentMethodIframe
             'amount' => $amount,
             'currency' => $currency,
             'EventToken' => 'GET',
-            'version' => 3,
+            'version' => 'v3',
         ];
         return $params;
     }
