@@ -28,6 +28,7 @@ namespace Fatchip\CTPayment;
 
 use Exception;
 use Fatchip\CTPayment\CTPaymentMethodsIframe\CreditCard;
+use Fatchip\CTPayment\CTPaymentMethodIframe;
 
 /**
  * Class CTAPITestService.
@@ -86,7 +87,7 @@ class CTAPITestService extends Encryption
             'urlFailure' => $router->assemble(array('controller' => 'FatchipCTCreditCard', 'action' => 'success', 'forceSecure' => true, 'appendSession' => false)),
             'urlNotify' => $router->assemble(array('controller' => 'FatchipCTCreditCard', 'action' => 'success',   'forceSecure' => true, 'appendSession' => false)),
             'orderDesc' => 'Test:0000',
-            'transID' => CreditCard::generateTransID(),
+            'transID' => CTPaymentMethodIframe::generateTransID(),
             'response' => 'encrypt',
             'reqID' => $reqId,
             'sdZip' => '10779',

@@ -51,7 +51,7 @@ class EasyCredit extends CTPaymentMethodIframe
      *
      * @var string
      */
-    protected $Salutation;
+    protected $salutation;
 
     /**
      * Vorname
@@ -333,7 +333,7 @@ class EasyCredit extends CTPaymentMethodIframe
      */
     public function setSalutation($salutation)
     {
-        $this->Salutation = $salutation;
+        $this->salutation = $salutation;
     }
 
     /**
@@ -342,7 +342,7 @@ class EasyCredit extends CTPaymentMethodIframe
      */
     public function getSalutation()
     {
-        return $this->Salutation;
+        return $this->salutation;
     }
 
 
