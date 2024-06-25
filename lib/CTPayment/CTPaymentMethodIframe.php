@@ -571,11 +571,11 @@ abstract class CTPaymentMethodIframe extends CTPaymentMethod
         $characters_length = strlen($characters);
         $transID = '';
 
-        for ($i = 1; $i < $digitCount; $i++) {
+        for ($i = 0; $i < $digitCount; $i++) {
             $random_index = random_int(0, $characters_length - 1);
             $transID .= $characters[$random_index];
         }
-
+        $test = strlen($transID);
         return $transID;
     }
 
