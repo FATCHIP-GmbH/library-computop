@@ -705,6 +705,14 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>API Zugang Testen (Erst Speichern und Caches leeren)<strong>',
                 ],
+                'prefixOrdernumber' => [
+                    'label' => 'Bestellnummer Präfix',
+                    'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
+                ],
+                'suffixOrdernumber' => [
+                    'label' => 'Bestellnummer Suffix',
+                    'description' => 'Suffix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
+                ],
                 'debuglog' => [
                     'label' => 'Debug Protokoll',
                     'description' => 'Erzeugt eine Log Datei <FatchipCTPayment_.log> mit Debug Ausgaben im Shopware Protokollverzeichnis',
@@ -868,6 +876,14 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>test API credentials (Save and clear cache first)<strong>',
                 ],
+                'prefixOrdernumber' => [
+                    'label' => 'Ordernumber prefix',
+                    'description' => 'Prefix for ordernumbers. Maximum 4 characters.<br>Characters more than 4 will be cut down when transferring to Computop.<br>No Placeholders allowed anymore.',
+                ],
+                'suffixOrdernumber' => [
+                    'label' => 'Ordernumber suffix',
+                    'description' => 'Suffix for ordernumbers. Maximum 4 characters.<br>Characters more than 4 will be cut down when transferring to Computop.<br>No Placeholders allowed anymore.',
+                ],
                 'debuglog' => [
                     'label' => 'Debug protocol',
                     'description' => 'Creates a log file <FatchipCTPayment_.log> with debugging output on the shopware log folder',
@@ -1028,6 +1044,14 @@ class CTPaymentConfigForms
                 ],
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>Tester les données d`accès API (Enregistrer d`abord et vider le cache)<strong>',
+                ],
+                'prefixOrdernumber' => [
+                    'label' => 'Préfixe de numéro de commande',
+                    'description' => 'Préfixe pour le numéro de commande. 4 caractères maximum.<br>Les caractères supplémentaires seront tronqués à l\'envoi vers Computop.<br>Les caractères génériques ne sont plus autorisés.',
+                ],
+                'suffixOrdernumber' => [
+                    'label' => 'Suffixe de numéro de commande',
+                    'description' => 'Suffixe pour le numéro de commande. 4 caractères maximum.<br>Les caractères supplémentaires seront tronqués à l\'envoi vers Computop.<br>Les caractères génériques ne sont plus autorisés.',
                 ],
                 'debuglog' => [
                     'label' => 'Journalisation de déboggage',
