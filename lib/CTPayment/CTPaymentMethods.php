@@ -35,7 +35,7 @@ class CTPaymentMethods
                 'shortname' => 'iDEAL',
                 'description' => 'Computop iDEAL',
                 'action' => 'FatchipCTIdeal',
-                'template' => 'fatchip_computop_ideal.tpl',
+                'template' => '',
                 'additionalDescription' => '',
                 'className' => 'Ideal',
                 //'countries' => ['DE', 'NL', 'DK', 'FI', 'SE', 'NO'],

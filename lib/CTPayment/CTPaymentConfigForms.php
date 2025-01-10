@@ -705,9 +705,6 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>API Zugang Testen (Erst Speichern und Caches leeren)<strong>',
                 ],
-                'fatchip_computop_ideal_button' => [
-                    'label' => '<strong>iDeal Banken aktualisieren <strong>',
-                ],
                 'prefixOrdernumber' => [
                     'label' => 'Bestellnummer Präfix',
                     'description' => 'Präfix für Bestellnummern. Maximal 4 Zeichen.<br>Mehr als 4 Zeichen werden bei der Übertragung zu Computop gekürzt.<br>Keine Platzhalter mehr erlaubt.',
@@ -879,9 +876,6 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>test API credentials (Save and clear cache first)<strong>',
                 ],
-                'fatchip_computop_ideal_button' => [
-                    'label' => '<strong>update iDeal banks<strong>',
-                ],
                 'prefixOrdernumber' => [
                     'label' => 'Ordernumber prefix',
                     'description' => 'Prefix for ordernumbers. Maximum 4 characters.<br>Characters more than 4 will be cut down when transferring to Computop.<br>No Placeholders allowed anymore.',
@@ -1051,9 +1045,6 @@ class CTPaymentConfigForms
                 'fatchip_computop_apitest_button' => [
                     'label' => '<strong>Tester les données d`accès API (Enregistrer d`abord et vider le cache)<strong>',
                 ],
-                'fatchip_computop_ideal_button' => [
-                    'label' => '<strong>Actualiser les iDeal banques<strong>',
-                ],
                 'prefixOrdernumber' => [
                     'label' => 'Préfixe de numéro de commande',
                     'description' => 'Préfixe pour le numéro de commande. 4 caractères maximum.<br>Les caractères supplémentaires seront tronqués à l\'envoi vers Computop.<br>Les caractères génériques ne sont plus autorisés.',
@@ -1121,7 +1112,6 @@ class CTPaymentConfigForms
                 ],
                 'idealDirektOderUeberSofort' => [
                     'label' => 'iDEAL - Service',
-                    'description' => 'iDEAL payments can be handled by using direct (Sofort) or PPRO.',
                     'description' => 'Les paiements iDEAL peuvent être gérés en utilisant direct (Sofort) ou PPRO.',
                 ],
                 'lastschriftDienst' => [

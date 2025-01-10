@@ -39,14 +39,6 @@ class Ideal extends CTPaymentMethodIframe
 
      const paymentClass = 'Ideal';
 
-    /**
-     * Nicht bei PPRO: BIC der ausgewählten Bank (siehe Abfrage der hinterlegten iDEAL-Banken)
-     *
-     *
-     * @var string
-     */
-    protected $issuerID;
-
     protected $idealDirekt;
 
     protected $Custom;
@@ -96,26 +88,6 @@ class Ideal extends CTPaymentMethodIframe
         return $this->idealDirekt;
     }
 
-
-
-    /**
-     * @ignore <description>
-     * @param string $issuerID
-     */
-    public function setIssuerID($issuerID)
-    {
-        $this->issuerID = $issuerID;
-    }
-
-    /**
-     * @ignore <description>
-     * @return string
-     */
-    public function getIssuerID()
-    {
-        return $this->issuerID;
-    }
-
     /**
      * returns paymentURL
      * @return string
@@ -131,23 +103,6 @@ class Ideal extends CTPaymentMethodIframe
     public function getCTCaptureURL()
     {
         return null;
-    }
-
-    /**
-     * returns IssuerListURL
-     * @return string
-     */
-    public function getIssuerListURL()
-    {
-        $queryarray = array();
-        $queryarray[] = 'merchantID=' . $this->getMerchantID();
-
-        $query = join("&", $queryarray);
-
-        $Len = strlen($query);  // Length of the plain text string
-        $data = $this->ctEncrypt($query, $Len, $this->getBlowfishPassword(), $this->encryption);
-
-        return 'https://www.computop-paygate.com/idealIssuerList.aspx' .  '?merchantID=' . $this->getMerchantID() . '&Len=' . $Len . "&Data=" . $data;
     }
 
     /**
