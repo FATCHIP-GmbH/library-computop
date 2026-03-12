@@ -199,8 +199,15 @@ abstract class CTPaymentMethod extends Encryption
         $curl = curl_init();
 
         curl_setopt_array($curl,
-            [ CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => $this->prepareComputopRequest($ctRequest, $url)
+            [
+                CURLOPT_RETURNTRANSFER => 1,
+                CURLOPT_URL => $this->prepareComputopRequest($ctRequest, $url),
+                CURLOPT_PROTOCOLS => CURLPROTO_HTTPS,
+                CURLOPT_SSL_VERIFYPEER => true,
+                CURLOPT_SSL_VERIFYHOST => 2,
+                CURLOPT_CONNECTTIMEOUT => 5,
+                CURLOPT_TIMEOUT => 10,
+                CURLOPT_FOLLOWLOCATION => false,
             ]);
         try {
             $resp = curl_exec($curl);
